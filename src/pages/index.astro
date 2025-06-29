@@ -1,0 +1,65 @@
+---
+import Header from '../components/Header.astro';
+import CircleLink from '../components/CircleLink.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Bitcoin 101</title>
+  </head>
+  <body>
+    <Header />
+    
+    <main class="main-content">
+      <div class="links-grid">
+        <CircleLink href="/wallet" text="Set Up Wallet" color="#F7931A" />
+        <CircleLink href="/buy" text="Buy Bitcoin" color="#4CAF50" />
+        <CircleLink href="/security" text="Security" color="#2196F3" />
+        <CircleLink href="/learn" text="Learn" color="#9C27B0" />
+        <CircleLink href="/earn" text="Earn" color="#FF9800" />
+        <CircleLink href="/community" text="Community" color="#E91E63" />
+      </div>
+    </main>
+
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #ffffff;
+      }
+
+      .main-content {
+        padding: 2rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .links-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      @media (min-width: 600px) {
+        .links-grid {
+          grid-template-columns: repeat(3, minmax(120px, 1fr));
+          max-width: 800px;
+          gap: 2rem;
+          padding: 2rem 1rem;
+        }
+      }
+    </style>
+  </body>
+</html>

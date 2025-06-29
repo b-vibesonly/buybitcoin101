@@ -1,0 +1,71 @@
+---
+// src/components/CircleLink.astro
+export interface Props {
+  href: string;
+  text: string;
+  color?: string;
+  size?: string;
+  textColor?: string;
+}
+
+const { 
+  href, 
+  text, 
+  color = '#F7931A',
+  size = '156px',
+  textColor = 'white'
+} = Astro.props;
+---
+
+<a 
+  href={href}
+  class="circle-link"
+  style={`
+    --circle-size: ${size};
+    --circle-color: ${color};
+    --text-color: ${textColor};
+  `}
+>
+  <span class="circle-link__text">{text}</span>
+</a>
+
+<style>
+  .circle-link {
+    --circle-size: 120px;
+    --circle-color: #F7931A;
+    --text-color: white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: var(--circle-size);
+    aspect-ratio: 1/1;
+    background-color: var(--circle-color);
+    border-radius: 50%;
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: calc(var(--circle-size) * 0.16);
+    transition: transform 0.2s ease;
+    margin: 0 auto;
+  }
+
+  .circle-link:hover {
+    transform: scale(1.05);
+  }
+
+  .circle-link__text {
+    padding: 0 10px;
+    word-break: break-word;
+  }
+
+  @media (max-width: 599px) {
+    .circle-link {
+      --circle-size: 100%;
+      max-width: 140px;
+      font-size: 1rem;
+    }
+  }
+</style>
