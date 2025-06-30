@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BackToHome from '../components/BackToHome.astro';
+import PageNav from '../components/PageNav.astro';
 ---
 
 <BaseLayout title="Really Important Facts About Bitcoin">
@@ -8,6 +11,7 @@ import Header from '../components/Header.astro';
     
     <main class="main-content">
       <div class="content-container">
+        <Breadcrumbs current="10 Bitcoin Facts" />
         <h1>10 Bitcoin Facts</h1>
         <p><strong>Bitcoin and Crypto are different things.</strong> </p>
         <p>When people learn the difference they understand why Bitcoin is so special.</p>
@@ -23,30 +27,41 @@ import Header from '../components/Header.astro';
       <li>Bitcoin (with big B) refers to the entire Bitcoin payments system (the protocol), while bitcoin (with small b) refers to the currency that you can buy, use and sell.</li>
       <li>bitcoin is a really bad money for criminals or money launderers to use. It can easily be tracked.</li>
     </ol>  
+        <BackToHome />
       </div>
+      <PageNav />
     </main>
 
     <style>
       .content-container {
-        padding: 2rem 1rem;
+        padding: var(--spacing-lg);
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        border: 1px solid var(--color-border);
+        box-shadow: 0 2px 4px rgba(120, 119, 108, 0.1);
         max-width: 800px;
-        margin: 0 auto;
+        margin: 0 auto var(--spacing-lg) auto;
       }
+      
       h1 {
-        color: #333;
-        margin-bottom: 1.5rem;
+        color: var(--color-text);
+        margin-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-sm);
+        border-bottom: 2px solid var(--color-border);
       }
-      h2 {
-        color: #333;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-      }
+      
       p {
-        margin-bottom: 1rem;
+        margin-bottom: var(--spacing-md);
         line-height: 1.6;
       }
-      strong {
-        color: #333;
+      
+      ol {
+        margin-left: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+      }
+      
+      li {
+        margin-bottom: var(--spacing-xs);
       }
     </style>
 </BaseLayout>

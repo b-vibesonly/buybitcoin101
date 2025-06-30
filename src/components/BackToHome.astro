@@ -1,0 +1,34 @@
+---
+// BackToHome.astro
+---
+
+<div class="back-to-home">
+  <a href="/" class="back-button">← Back to Home</a>
+</div>
+
+<style>
+  .back-to-home {
+    margin: var(--spacing-lg) 0;
+    text-align: center;
+  }
+  
+  .back-button {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    border-radius: 5px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(120, 119, 108, 0.1);
+  }
+  
+  .back-button:hover {
+    background: var(--color-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(120, 119, 108, 0.2);
+  }
+</style>

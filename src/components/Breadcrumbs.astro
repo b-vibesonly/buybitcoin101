@@ -1,0 +1,44 @@
+---
+// Breadcrumbs.astro
+export interface Props {
+  current: string;
+}
+
+const { current } = Astro.props;
+---
+
+<nav class="breadcrumbs">
+  <a href="/" class="breadcrumb-link">Home</a>
+  <span class="breadcrumb-separator">></span>
+  <span class="breadcrumb-current">{current}</span>
+</nav>
+
+<style>
+  .breadcrumbs {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-light);
+  }
+  
+  .breadcrumb-link {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .breadcrumb-link:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 0.5rem;
+    color: var(--color-border);
+  }
+  
+  .breadcrumb-current {
+    color: var(--color-text);
+    font-weight: bold;
+  }
+</style>

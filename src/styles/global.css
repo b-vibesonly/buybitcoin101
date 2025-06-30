@@ -1,12 +1,12 @@
 /* Global Styles */
 :root {
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  --font-sans: 'Courier New', 'Courier', monospace;
+  --font-mono: 'Courier New', 'Courier', monospace;
   
-  --color-text: #1a1a1a;
-  --color-text-light: #4a4a4a;
-  --color-bg: #ffffff;
-  --color-border: #e0e0e0;
+  --color-text: #2c2c2c;
+  --color-text-light: #5a5a5a;
+  --color-bg: #f9f7f1;
+  --color-border: #d4c5a9;
   
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -40,11 +40,45 @@ body {
   padding: 0;
   font-family: var(--font-sans);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 108, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(120, 119, 108, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(120, 119, 108, 0.03) 0%, transparent 50%),
+    linear-gradient(90deg, rgba(120, 119, 108, 0.02) 0px, transparent 1px),
+    linear-gradient(180deg, rgba(120, 119, 108, 0.02) 0px, transparent 1px);
+  background-size: 
+    800px 800px,
+    600px 600px, 
+    400px 400px,
+    20px 20px,
+    20px 20px;
+  background-position: 
+    0 0,
+    100px 100px,
+    200px 200px,
+    0 0,
+    0 0;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(120, 119, 108, 0.01) 49%, rgba(120, 119, 108, 0.01) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(120, 119, 108, 0.01) 49%, rgba(120, 119, 108, 0.01) 51%, transparent 52%);
+  background-size: 3px 3px;
+  pointer-events: none;
+  z-index: -1;
 }
 
 #__next,
@@ -58,10 +92,12 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: bold;
+  line-height: 1.3;
   margin-bottom: var(--spacing-md);
   color: var(--color-text);
+  font-family: var(--font-mono);
+  text-shadow: 1px 1px 0px rgba(120, 119, 108, 0.1);
 }
 
 h1 {
@@ -80,17 +116,19 @@ h3 {
 p {
   margin-bottom: var(--spacing-md);
   max-width: 65ch;
+  font-family: var(--font-mono);
 }
 
 a {
-  color: #2563eb;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  color: #8b4513;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+  font-family: var(--font-mono);
 }
 
 a:hover {
-  color: #1d4ed8;
-  text-decoration: underline;
+  color: #654321;
+  text-shadow: 1px 1px 0px rgba(120, 119, 108, 0.2);
 }
 
 /* Layout */
