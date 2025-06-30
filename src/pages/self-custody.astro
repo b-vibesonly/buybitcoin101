@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout title="What is Self Custody?">
+    <Header />
+    
+    <main class="main-content">
+      <div class="content-container">
+        <h1>What is Self Custody?</h1>
+        <p>Self-custody means you have complete control over your Bitcoin by holding your own private keys, rather than entrusting them to a third party like an exchange. This is a fundamental principle of true Bitcoin ownership.</p>
+        <p>When you use self-custody solutions like hardware wallets, paper wallets, or non-custodial software wallets, you eliminate the risk of exchange hacks, freezes, or other restrictions that can occur when leaving your funds with third parties.</p>
+        <p>While self-custody comes with greater responsibility (you must securely store your private keys), it's considered the most secure way to hold Bitcoin and aligns with the cryptocurrency's ethos of financial sovereignty.</p>
+      </div>
+    </main>
+
+    <style>
+      .content-container {
+        padding: 2rem 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+    </style>
+</BaseLayout>

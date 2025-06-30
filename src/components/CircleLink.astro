@@ -64,8 +64,30 @@ const {
   @media (max-width: 599px) {
     .circle-link {
       --circle-size: 100%;
-      max-width: 140px;
-      font-size: 1rem;
+      max-width: 160px;
+      min-height: 120px;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .circle-link {
+      --circle-size: 140px;
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .circle-link {
+      --circle-size: 130px;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .circle-link {
+      --circle-size: 156px;
+      font-size: 0.9rem;
     }
   }
 </style>

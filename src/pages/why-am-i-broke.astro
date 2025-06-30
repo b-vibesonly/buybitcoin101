@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout title="Why Am I Broke?">
+    <Header />
+    
+    <main class="main-content">
+      <div class="content-container">
+        <h1>Why Am I Broke?</h1>
+        <p>Many people find themselves asking this question despite working hard and earning a steady income. The answer often lies in understanding personal finance, inflation, and the nature of traditional financial systems.</p>
+        <p>Inflation erodes the purchasing power of your money over time, meaning the cash you save today will buy less in the future. Additionally, traditional savings accounts typically offer interest rates that don't keep up with inflation, effectively causing you to lose money over time.</p>
+        <p>Bitcoin presents an alternative as a deflationary asset with a fixed supply, potentially offering a way to preserve and grow your wealth over the long term, unlike traditional fiat currencies that can be printed without limit.</p>
+      </div>
+    </main>
+
+    <style>
+      .content-container {
+        padding: 2rem 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+    </style>
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout title="What is Money?">
+    <Header />
+    
+    <main class="main-content">
+      <div class="content-container">
+        <h1>What is Money?</h1>
+        <p>For something to be money it needs to be good at certain things.</p>
+        <p>It should be:</p>
+        <ul>
+          <li>Tough and not easily destroyed.</li>
+          <li>Be able to be divided into smaller units so you can buy cheap things easily.</li>
+          <li>Easy to carry around.</li>
+          <li>Scarce so it holds it's value and buys the same amount of things years later.</li>
+          <li>Hard to fake, so you don't have to worry about counterfeits.</li> 
+        </ul>
+        <br />
+        <p>If something can do all of the above maybe it can be used as money.</p>
+        <p>Bitcoin is so good at the above that some people call it <strong>perfect money.</strong></p>
+      </div>
+    </main>
+
+    <style>
+      .content-container {
+        padding: 2rem 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+    </style>
+</BaseLayout>

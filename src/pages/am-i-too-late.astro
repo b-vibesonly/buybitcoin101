@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout title="Am I Too Late for Bitcoin?">
+    <Header />
+    
+    <main class="main-content">
+      <div class="content-container">
+        <h1>NO, YOU ARE NOT TOO LATE</h1>
+        <ul>
+          <li>How many people do you know that own bitcoin?</li>
+          <li>How many people do you know that understand bitcoin?</li>
+          <li>Bitcoiners believe that bitcoin is undervalued, misunderstood, and underappreciated.</li>
+        </ul>
+        <br />
+        <p>Anyone buying bitcoin today is still early.</p>
+      </div>
+    </main>
+
+    <style>
+      .content-container {
+        padding: 2rem 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+    </style>
+</BaseLayout>

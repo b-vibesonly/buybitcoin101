@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout title="Really Important Facts About Bitcoin">
+    <Header />
+    
+    <main class="main-content">
+      <div class="content-container">
+        <h1>10 Bitcoin Facts</h1>
+        <p><strong>Bitcoin and Crypto are different things.</strong> </p>
+        <p>When people learn the difference they understand why Bitcoin is so special.</p>
+      <ol>
+        <li>There will only ever be 21 million bitcoin.</li>
+        <li>No one knows who invented Bitcoin.</li>
+        <li>Bitcoin is not a company, it doesn't have a CEO or leader, and can't go bankrupt. Bitcoin has nothing to do with the NASDAQ, or any political party, or a specific country.</li>
+      <li>Bitcoin was inspired by decades of research into money and cryptography.</li>
+      <li>Bitcoin was designed to help everyday people by preserving their wealth and making their payments impossible to block.</li>
+      <li>It's incredibly difficult to steal bitcoin when someone understands how it works.</li>
+      <li>Bitcoin mining creates new bitcoin. It's not solving complex math problems. It's more like a lottery that requires electricity to play, this makes bitcoin hard to produce, or fake, and keeps it scarce. <strong>Bitcoin is backed by energy.</strong></li>
+      <li>Every four years the amount of new bitcoin that can be created is halved.</li>  
+      <li>Bitcoin (with big B) refers to the entire Bitcoin payments system (the protocol), while bitcoin (with small b) refers to the currency that you can buy, use and sell.</li>
+      <li>bitcoin is a really bad money for criminals or money launderers to use. It can easily be tracked.</li>
+    </ol>  
+      </div>
+    </main>
+
+    <style>
+      .content-container {
+        padding: 2rem 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+      h2 {
+        color: #333;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+      strong {
+        color: #333;
+      }
+    </style>
+</BaseLayout>
