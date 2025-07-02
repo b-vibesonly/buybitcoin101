@@ -12,13 +12,6 @@ import PageNav from '../components/PageNav.astro';
     <main class="main-content">
       <div class="content-container">
         <Breadcrumbs current="Am I Too Late" />
-        <div class="header-image">
-          <img 
-            src="/images/toolate.png" 
-            alt="No, you are not too late"
-            class="too-late-image"
-          />
-        </div>
         <ul>
           <li>How many people do you know that own bitcoin?</li>
           <li>How many people do you know that understand bitcoin?</li>
@@ -26,6 +19,13 @@ import PageNav from '../components/PageNav.astro';
         </ul>
         <br />
         <p>Anyone buying bitcoin today is still early.</p>
+        <div class="header-image">
+          <img 
+            src="/images/toolate.png" 
+            alt="No, you are not too late"
+            class="too-late-image"
+          />
+        </div>
         <BackToHome />
       </div>
       <PageNav />
@@ -44,6 +44,7 @@ import PageNav from '../components/PageNav.astro';
       
       .header-image {
         text-align: center;
+        margin-top: var(--spacing-lg);
         margin-bottom: var(--spacing-lg);
       }
       
