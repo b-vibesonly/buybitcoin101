@@ -13,9 +13,141 @@ import PageNav from '../components/PageNav.astro';
       <div class="content-container">
         <Breadcrumbs current="Self Custody" />
         <h1>What is Self Custody?</h1>
-        <p>Self-custody means you have complete control over your Bitcoin by holding your own private keys, rather than entrusting them to a third party like an exchange. This is a fundamental principle of true Bitcoin ownership.</p>
-        <p>When you use self-custody solutions like hardware wallets, paper wallets, or non-custodial software wallets, you eliminate the risk of exchange hacks, freezes, or other restrictions that can occur when leaving your funds with third parties.</p>
-        <p>While self-custody comes with greater responsibility (you must securely store your private keys), it's considered the most secure way to hold Bitcoin and aligns with the cryptocurrency's ethos of financial sovereignty.</p>
+        
+        <p>Imagine you have 3 gold bars under your mattress.</p>
+        
+        <p>You can always check that they are still there, sell them when you want to, and count them to make sure none are missing.</p>
+        
+        <p>Now imagine you get nervous that someone else might find them and carry them away, so you decide to put them in a bank vault.</p>
+        
+        <p>At first, this seems like an improvement. Every month, the bank sends you a letter saying you still have 3 gold bars. The bank seems like a much safer place to store your gold than under your mattress.</p>
+        
+        <p>However, trusting a bank to hold your gold bars comes with some downsides.</p>
+        
+        <p>Every month, the bank sends you a statement saying you still own 3 gold bars — but how do you really know the bank has them? The statement is just a piece of paper.</p>
+        
+        <p>The bank says you can sell the gold bars anytime. But how do you know that's true? Now you need the bank's permission to sell your gold bars.</p>
+        
+        <p>The bank is just a company. If a new government decides it needs your gold, will the bank give your gold to the government?<br>
+        Probably yes.</p>
+        
+        <p>When you give your gold to someone else (like a bank), you have far less control over your property and savings. When you keep the gold under your mattress, you have full control — this is called self-custody.</p>
+        
+        <p>Keeping your bitcoin on an exchange and not withdrawing it is like keeping your gold in a bank. Learning how to self-custody gives you total freedom over your own money (your bitcoin).</p>
+        
+        <p>Bitcoin self-custody involves keeping a password safe — instead of physical gold bars. This password gives you control over your bitcoin.</p>
+        
+        <p>In Bitcoin, this password is commonly referred to as a "seed phrase," "primary key," or simply "keys."</p>
+        
+        <div class="warning-box green">
+          <p><strong>IF YOU NEVER GIVE YOUR SEED PHRASE TO ANYONE, NO ONE CAN TAKE YOUR BITCOIN.</strong></p>
+        </div>
+        
+        <div class="warning-box red">
+          <p><strong>IF YOU GIVE YOUR SEED PHRASE TO SOMEONE, YOU ARE GIVING THEM YOUR BITCOIN.</strong></p>
+        </div>
+        
+        <p>People trying to steal bitcoin often rely on tricking someone into revealing their seed phrase.</p>
+        
+        <p>Self-custody requires some learning and practice, but there are many tools and resources available to help. It's not as hard as it sounds, and you can experiment with small amounts of bitcoin.</p>
+        
+        <h2>The skills you will need to learn:</h2>
+        
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">🔐</div>
+            <h3>Seed Phrase Security</h3>
+            <p>What a seed phrase is and how to store one safely.</p>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-icon">💻↔️</div>
+            <h3>Using a "Wallet"</h3>
+            <p>Picking a software app or hardware device to load your seed phrase into, so you can approve your bitcoin payments.</p>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-icon">⚡</div>
+            <h3>Run Your Own Node</h3>
+            <p>Running your own Bitcoin node to verify how much bitcoin is tied to your seed phrase, and send and receive it using your own device.</p>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-icon">🧩</div>
+            <h3>UTXO Management</h3>
+            <p>Organizing your chunks of bitcoin to make it easy to spend in the future.</p>
+          </div>
+        </div>
+        
+        <h2>Recommended Resources</h2>
+        
+        <div class="resource-cards">
+          <div class="resource-section">
+            <h3>Tutorials</h3>
+            <a href="https://www.youtube.com/c/BTCSessions" class="resource-card" target="_blank" rel="noopener noreferrer">
+              <div class="card-header">
+                <h4>BTC Sessions</h4>
+                <span class="card-badge">YouTube</span>
+              </div>
+              <p class="card-description">Comprehensive tutorials on Bitcoin self-custody basics and advanced techniques.</p>
+              <div class="card-footer">
+                <span class="card-url">youtube.com/c/BTCSessions</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </a>
+            
+            <a href="https://www.btcsessions.ca/" class="resource-card" target="_blank" rel="noopener noreferrer">
+              <div class="card-header">
+                <h4>BTC Sessions Website</h4>
+                <span class="card-badge">Website</span>
+              </div>
+              <p class="card-description">Written guides and resources for Bitcoin education and self-custody.</p>
+              <div class="card-footer">
+                <span class="card-url">btcsessions.ca</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </a>
+          </div>
+          
+          <div class="resource-section">
+            <h3>Self-Custody Services</h3>
+            <a href="https://keys.casa/" class="resource-card" target="_blank" rel="noopener noreferrer">
+              <div class="card-header">
+                <h4>Casa</h4>
+                <span class="card-badge">Service</span>
+              </div>
+              <p class="card-description">Multi-signature wallets and inheritance planning for Bitcoin self-custody.</p>
+              <div class="card-footer">
+                <span class="card-url">keys.casa</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </a>
+            
+            <a href="https://unchained.com/" class="resource-card" target="_blank" rel="noopener noreferrer">
+              <div class="card-header">
+                <h4>Unchained</h4>
+                <span class="card-badge">Service</span>
+              </div>
+              <p class="card-description">Bitcoin custody solutions with collaborative multisig and lending services.</p>
+              <div class="card-footer">
+                <span class="card-url">unchained.com</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </a>
+            
+            <a href="https://thebitcoinway.com/" class="resource-card" target="_blank" rel="noopener noreferrer">
+              <div class="card-header">
+                <h4>The Bitcoin Way</h4>
+                <span class="card-badge">Service</span>
+              </div>
+              <p class="card-description">Personalized Bitcoin education and self-custody guidance.</p>
+              <div class="card-footer">
+                <span class="card-url">thebitcoinway.com</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </div>
         <BackToHome />
       </div>
       <PageNav />
@@ -39,9 +171,161 @@ import PageNav from '../components/PageNav.astro';
         border-bottom: 2px solid var(--color-border);
       }
       
+      h2 {
+        color: var(--color-text);
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-md);
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        color: var(--color-text);
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-md);
+        font-size: 1.25rem;
+      }
+      
       p {
         margin-bottom: var(--spacing-md);
         line-height: 1.6;
+      }
+      
+      .resource-cards {
+        margin-top: 2rem;
+      }
+      
+      .resource-section {
+        margin-bottom: 2rem;
+      }
+      
+      .resource-card {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s ease;
+        display: block;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        margin-bottom: 1rem;
+      }
+      
+      
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+      }
+      
+      .card-header h4 {
+        margin: 0;
+        font-size: 1.125rem;
+        color: #333;
+      }
+      
+      .card-badge {
+        background: #F7931A;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      
+      .card-description {
+        color: #666;
+        margin: 0 0 1rem 0;
+        line-height: 1.5;
+      }
+      
+      .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .card-url {
+        color: #666;
+        font-size: 0.875rem;
+      }
+      
+      .card-arrow {
+        color: #F7931A;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      
+      .warning-box {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+      
+      .warning-box p {
+        margin: 0;
+        color: #333;
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.5;
+      }
+      
+      .warning-box.green {
+        background: #d4edda;
+        border-color: #28a745;
+      }
+      
+      .warning-box.green p {
+        color: #155724;
+      }
+      
+      .warning-box.red {
+        background: #f8d7da;
+        border-color: #dc3545;
+      }
+      
+      .warning-box.red p {
+        color: #721c24;
+      }
+      
+      .skills-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin: 2rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+      
+      .skill-card {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s ease;
+      }
+      
+      
+      .skill-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .skill-card h3 {
+        margin: 0 0 1rem 0;
+        color: #333;
+        font-size: 1.125rem;
+      }
+      
+      .skill-card p {
+        margin: 0;
+        color: #666;
+        line-height: 1.5;
+        text-align: left;
       }
     </style>
 </BaseLayout>
