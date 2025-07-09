@@ -11,11 +11,15 @@ import PageHeader from '../components/PageHeader.astro';
     <Header />
     
     <main class="main-content">
-      <PageHeader 
-        title="Why Am I Broke?" 
-        color="#7C4DFF" 
-        textColor="white"
-      />
+      <section class="page-header-section">
+        <div class="page-header-container">
+          <PageHeader 
+            title="Why Am I Broke?" 
+            color="#7C4DFF" 
+            textColor="white"
+          />
+        </div>
+      </section>
       
       <div class="content-container">
         <Breadcrumbs current="Why Am I Broke?" />
@@ -66,6 +70,15 @@ import PageHeader from '../components/PageHeader.astro';
     </main>
 
     <style>
+      .page-header-section {
+        max-width: 800px;
+        margin: 0 auto var(--spacing-xs) auto;
+      }
+      
+      .page-header-container {
+        width: 100%;
+      }
+      
       .content-container {
         padding: var(--spacing-lg);
         background: var(--color-bg-alt);
