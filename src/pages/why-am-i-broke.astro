@@ -4,15 +4,21 @@ import Header from '../components/Header.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BackToHome from '../components/BackToHome.astro';
 import PageNav from '../components/PageNav.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="Why Am I Broke?">
     <Header />
     
     <main class="main-content">
+      <PageHeader 
+        title="Why Am I Broke?" 
+        color="#7C4DFF" 
+        textColor="white"
+      />
+      
       <div class="content-container">
-        <Breadcrumbs current="Why Am I Broke" />
-        <h1>Why Am I Broke?</h1>
+        <Breadcrumbs current="Why Am I Broke?" />
         
         <p class="intro-text"><strong>Inflation makes your money worth less.</strong></p>
         

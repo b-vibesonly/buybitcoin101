@@ -4,15 +4,21 @@ import Header from '../components/Header.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BackToHome from '../components/BackToHome.astro';
 import PageNav from '../components/PageNav.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
-<BaseLayout title="Where to Buy Bitcoin">
+<BaseLayout title="Where to Buy">
     <Header />
     
     <main class="main-content">
+      <PageHeader 
+        title="Where to Buy" 
+        color="#FF4081" 
+        textColor="white"
+      />
+      
       <div class="content-container">
         <Breadcrumbs current="Where to Buy" />
-        <h1>Where to Buy Bitcoin</h1>
         <p>Most Bitcoiners recommend buying bitcoin from a bitcoin only exchange. You can search for <strong>"bitcoin only exchanges"</strong> on the internet to find options in your country. Bitcoiners recommend bitcoin only exchanges because of their focus on providing a safe and secure Bitcoin experience.</p>
         <p>Here are some options available in the US:</p>
         

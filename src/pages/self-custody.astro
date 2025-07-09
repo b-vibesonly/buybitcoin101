@@ -4,15 +4,21 @@ import Header from '../components/Header.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BackToHome from '../components/BackToHome.astro';
 import PageNav from '../components/PageNav.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="What is Self Custody?">
     <Header />
     
     <main class="main-content">
+      <PageHeader 
+        title="What is Self Custody?" 
+        color="#FF2D55" 
+        textColor="white"
+      />
+      
       <div class="content-container">
         <Breadcrumbs current="Self Custody" />
-        <h1>What is Self Custody?</h1>
         
         <p>Imagine you have 3 gold bars under your mattress.</p>
         

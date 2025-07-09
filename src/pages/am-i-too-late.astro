@@ -4,14 +4,21 @@ import Header from '../components/Header.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BackToHome from '../components/BackToHome.astro';
 import PageNav from '../components/PageNav.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
-<BaseLayout title="Am I Too Late for Bitcoin?">
+<BaseLayout title="Am I Too Late to Buy Bitcoin?">
     <Header />
     
     <main class="main-content">
+      <PageHeader 
+        title="Am I Too Late to Buy Bitcoin?" 
+        color="#00E676" 
+        textColor="#111"
+      />
+      
       <div class="content-container">
-        <Breadcrumbs current="Am I Too Late" />
+        <Breadcrumbs current="Am I Too Late?" />
         <ul>
           <li>How many people do you know that own bitcoin?</li>
           <li>How many people do you know that understand bitcoin?</li>

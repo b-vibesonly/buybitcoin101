@@ -1,0 +1,52 @@
+---
+// src/components/PageHeader.astro
+export interface Props {
+  title: string;
+  color: string;
+  textColor?: string;
+  subtitle?: string;
+}
+
+const { title, color, textColor = '#111', subtitle } = Astro.props;
+---
+
+<header class="page-header" style={`--page-color: ${color}; --page-text: ${textColor}`}>
+  <div class="container">
+    <h1 class="page-title">{title}</h1>
+  </div>
+</header>
+
+<style>
+  .page-header {
+    background: var(--page-color);
+    color: var(--page-text);
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+  }
+  
+  .page-title {
+    display: block;
+    width: 100%;
+    color: var(--page-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font-mono);
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: var(--page-color);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: 1.2;
+  }
+  
+  .page-title:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+</style>

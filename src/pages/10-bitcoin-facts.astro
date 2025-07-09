@@ -4,15 +4,21 @@ import Header from '../components/Header.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BackToHome from '../components/BackToHome.astro';
 import PageNav from '../components/PageNav.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
-<BaseLayout title="Really Important Facts About Bitcoin">
+<BaseLayout title="10 Bitcoin Facts">
     <Header />
     
     <main class="main-content">
+      <PageHeader 
+        title="10 Bitcoin Facts" 
+        color="#FFEA00" 
+        textColor="#111"
+      />
+      
       <div class="content-container">
         <Breadcrumbs current="10 Bitcoin Facts" />
-        <h1>10 Bitcoin Facts</h1>
         <p><strong>Bitcoin and Crypto are different things.</strong> </p>
         <p>When people learn the difference they understand why Bitcoin is so special.</p>
       <div class="facts-container">
