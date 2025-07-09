@@ -15,53 +15,204 @@ import PageNav from '../components/PageNav.astro';
         <h1>10 Bitcoin Facts</h1>
         <p><strong>Bitcoin and Crypto are different things.</strong> </p>
         <p>When people learn the difference they understand why Bitcoin is so special.</p>
-      <ol>
-        <li>There will only ever be 21 million bitcoin.</li>
-        <li>No one knows who invented Bitcoin.</li>
-        <li>Bitcoin is not a company, it doesn't have a CEO or leader, and can't go bankrupt. Bitcoin has nothing to do with the NASDAQ, or any political party, or a specific country.</li>
-      <li>Bitcoin was inspired by decades of research into money and cryptography.</li>
-      <li>Bitcoin was designed to help everyday people by preserving their wealth and making their payments impossible to block.</li>
-      <li>It's incredibly difficult to take or steal someone's bitcoin when they understand how it works.</li>
-      <li>Bitcoin mining creates new bitcoin. It's not solving complex math problems. It's more like a lottery that requires electricity to play, this makes bitcoin hard to produce, or fake, and keeps it scarce. <strong>Bitcoin is backed by energy.</strong></li>
-      <li>Every four years the amount of new bitcoin that can be created is halved. Most of it already exists.</li>  
-      <li>Bitcoin (with big B) refers to the entire Bitcoin payments system (the protocol), while bitcoin (with small b) refers to the currency/money that you can buy, use and sell.</li>
-      <li>bitcoin is a really bad money for criminals or money launderers to use. It can easily be tracked.</li>
-    </ol>  
+      <div class="facts-container">
+        <div class="fact">
+          <span class="fact-number">1</span>
+          <div class="fact-content">There will only ever be 21 million bitcoin.</div>
+        </div>
+        <div class="fact">
+          <span class="fact-number">2</span>
+          <div class="fact-content">No one knows who invented Bitcoin.</div>
+        </div>
+        <div class="fact">
+          <span class="fact-number">3</span>
+          <div class="fact-content">Bitcoin is not a company, it doesn't have a CEO or leader, and can't go bankrupt. Bitcoin has nothing to do with the NASDAQ, or any political party, or a specific country.</div>
+        </div>
+        <div class="fact">
+          <span class="fact-number">4</span>
+          <div class="fact-content">Bitcoin was inspired by decades of research into money and cryptography.</div>
+        </div>
+        <div class="fact">
+          <span class="fact-number">5</span>
+          <div class="fact-content">Bitcoin was designed to help everyday people by preserving their wealth and making their payments impossible to block.</div>
+        </div>
+        <div class="fact">
+          <span class="fact-number">6</span>
+          <div class="fact-content">It's incredibly difficult to take or steal someone's bitcoin when they understand how it works.</div>
+        </div>
+        <div class="fact">
+          <span class="fact-number">7</span>
+          <div class="fact-content">Bitcoin mining creates new bitcoin. It's not solving complex math problems. It's more like a lottery that requires electricity to play, this makes bitcoin hard to produce, or fake, and keeps it scarce. <strong style="color: var(--color-primary);">Bitcoin is backed by energy.</strong></div>
+        </div>
+        <div class="fact">
+          <span class="fact-number">8</span>
+          <div class="fact-content">Every four years the amount of new bitcoin that can be created is halved. Most of it already exists.</div>
+        </div>
+        <div class="fact">
+          <span class="fact-number">9</span>
+          <div class="fact-content">Bitcoin (with big B) refers to the entire Bitcoin payments system (the protocol), while bitcoin (with small b) refers to the currency/money that you can buy, use and sell.</div>
+        </div>
+        <div class="fact">
+          <span class="fact-number">10</span>
+          <div class="fact-content">bitcoin is a really bad money for criminals or money launderers to use. It can easily be tracked.</div>
+        </div>
+      </div>
         <BackToHome />
       </div>
       <PageNav />
     </main>
 
     <style>
+      .main-content {
+        padding: var(--spacing-lg) 0;
+        flex: 1;
+        background: #000; /* Pure black background */
+        min-height: 100%;
+      }
+
       .content-container {
         padding: var(--spacing-lg);
-        background: rgba(255, 255, 255, 0.8);
+        background: #000;
         border-radius: 8px;
-        border: 1px solid var(--color-border);
-        box-shadow: 0 2px 4px rgba(120, 119, 108, 0.1);
+        border: 1px solid #444;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         max-width: 800px;
         margin: 0 auto var(--spacing-lg) auto;
+        color: #e0e0e0;
       }
       
       h1 {
-        color: var(--color-text);
+        color: #fff;
         margin-bottom: var(--spacing-lg);
         padding-bottom: var(--spacing-sm);
-        border-bottom: 2px solid var(--color-border);
+        border-bottom: 2px solid #444;
+        font-size: 2rem;
+        line-height: 1.3;
+        font-weight: 700;
       }
       
-      p {
-        margin-bottom: var(--spacing-md);
-        line-height: 1.6;
+      .facts-container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto var(--spacing-xl) auto;
+        padding: 0;
       }
       
-      ol {
-        margin-left: var(--spacing-md);
-        margin-bottom: var(--spacing-md);
+      .fact {
+        background: #000;
+        border: 1px solid #444;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: flex-start;
       }
       
-      li {
-        margin-bottom: var(--spacing-xs);
+      .fact:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        border-color: #F7931A;
+      }
+      
+      .fact-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #F7931A;
+        color: #000;
+        min-width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        font-weight: 700;
+        margin-right: 1rem;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      
+      .fact-content {
+        color: #e0e0e0;
+        line-height: 1.7;
+        margin: 0;
+        font-size: 1rem;
+      }
+      
+      .fact-content strong {
+        color: #F7931A;
+        font-weight: 600;
+      }
+      
+      .warning-box {
+        background: #fff !important;
+        border: 2px solid #ff4444 !important;
+        position: relative;
+        margin: 2rem 0;
+      }
+      
+      .warning-box .fact-content {
+        color: #000 !important;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+      }
+      
+      .warning-box .fact-number {
+        background: #ff4444 !important;
+        color: #fff !important;
+        font-weight: 800;
+      }
+      
+      .warning-box::before {
+        content: '⚠️';
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+      }
+      
+      @media (min-width: 768px) {
+        .fact-grid {
+          grid-template-columns: repeat(2, 1fr);
+          margin: 0 var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+          border-radius: 8px;
+        }
+        
+        .content-container::before {
+          left: var(--spacing-md);
+          right: var(--spacing-md);
+        }
+        
+        h1 {
+          font-size: 1.75rem;
+        }
+        
+        ol {
+          padding-left: var(--spacing-md);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          animation: none !important;
+        }
+        
+        .content-container {
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+        }
+        
+        li:hover {
+          transform: none !important;
+        }
+        
+        li:hover::before {
+          transform: translateY(-50%) !important;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+        }
       }
     </style>
 </BaseLayout>

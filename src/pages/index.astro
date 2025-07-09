@@ -9,48 +9,133 @@ import CircleLink from '../components/CircleLink.astro';
     
     <main class="main-content">
       <div class="container">
+
         <div class="links-grid">
-          <CircleLink href="/what-is-money" text="What is money" color="#00E5FF" textColor="#111" />
-          <CircleLink href="/why-am-i-broke" text="Why am I broke" color="#7C4DFF" textColor="white" />
-          <CircleLink href="/10-bitcoin-facts" text="10 Bitcoin facts" color="#FFEA00" textColor="#111" />
-          <CircleLink href="/am-i-too-late" text="Am I too late" color="#00E676" textColor="#111" />
-          <CircleLink href="/where-to-buy" text="Where to buy" color="#FF4081" textColor="white" />
-          <CircleLink href="/self-custody" text="What is self custody" color="#FF2D55" textColor="white" />
+          <CircleLink 
+            href="/what-is-money" 
+            text="What is money" 
+            color="#00E5FF" 
+            textColor="#111" 
+          />
+          <CircleLink 
+            href="/why-am-i-broke" 
+            text="Why am I broke" 
+            color="#7C4DFF" 
+            textColor="white" 
+          />
+          <CircleLink 
+            href="/10-bitcoin-facts" 
+            text="10 Bitcoin facts" 
+            color="#FFEA00" 
+            textColor="#111" 
+          />
+          <CircleLink 
+            href="/am-i-too-late" 
+            text="Am I too late" 
+            color="#00E676" 
+            textColor="#111" 
+          />
+          <CircleLink 
+            href="/where-to-buy" 
+            text="Where to buy" 
+            color="#FF4081" 
+            textColor="white" 
+          />
+          <CircleLink 
+            href="/self-custody" 
+            text="Self custody" 
+            color="#FF2D55" 
+            textColor="white" 
+          />
         </div>
+        
+
       </div>
     </main>
 
     <style>
+      .main-content {
+        padding: var(--spacing-lg) 0;
+        flex: 1;
+      }
+      
+      .page-header {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+        padding: 0 var(--spacing-md);
+      }
+      
+      .page-title {
+        color: var(--color-text);
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-sm);
+        font-weight: 800;
+        line-height: 1.2;
+      }
+      
+      .page-subtitle {
+        color: var(--color-text-light);
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
       .links-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
         width: 100%;
-        padding: var(--spacing-md) 0;
-        max-width: 400px;
+        padding: var(--spacing-lg) 0;
+        max-width: 600px;
         margin: 0 auto;
+      }
+      
+      .intro-text {
+        max-width: 800px;
+        margin: var(--spacing-xl) auto 0;
+        padding: 0 var(--spacing-md);
+        text-align: center;
+        color: var(--color-text-light);
+        line-height: 1.7;
+      }
+      
+      .intro-text p {
+        margin: 0;
       }
 
       @media (min-width: 600px) {
         .links-grid {
           grid-template-columns: repeat(3, 1fr);
-          max-width: 600px;
+          max-width: 800px;
           gap: var(--spacing-lg);
+        }
+        
+        .page-title {
+          font-size: 3rem;
+        }
+        
+        .page-subtitle {
+          font-size: 1.5rem;
         }
       }
 
       @media (min-width: 1024px) {
         .links-grid {
-          grid-template-columns: repeat(6, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           max-width: 1000px;
-          gap: var(--spacing-md);
-          padding: var(--spacing-lg) 0;
+          gap: var(--spacing-xl);
+          padding: var(--spacing-xl) 0;
+        }
+        
+        .page-header {
+          margin-bottom: var(--spacing-xxl);
         }
       }
-
-      @media (min-width: 1200px) {
-        .links-grid {
-          gap: var(--spacing-lg);
+      
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          animation: none !important;
         }
       }
     </style>
