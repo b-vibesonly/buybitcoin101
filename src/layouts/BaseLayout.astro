@@ -9,7 +9,7 @@ const { title, description = 'Learn about Bitcoin and how to get started' } = As
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="dark-theme">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,142 +18,54 @@ const { title, description = 'Learn about Bitcoin and how to get started' } = As
     <title>{title} | Buy Bitcoin 101</title>
     <link rel="stylesheet" href="/styles/global.css" />
     <style>
-      /* Base styles */
-      html, body {
-        background: #000000;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        min-height: 100%;
+      .footer {
+        text-align: center;
+        padding: var(--spacing-lg) var(--spacing-md);
+        border-top: 1px solid var(--color-border);
+        margin-top: var(--spacing-xl);
       }
       
-      body {
-        background: #000000;
+      .nostr-link {
+        color: var(--color-text-light);
+        text-decoration: none;
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        transition: color 0.2s ease;
+      }
+      
+      .nostr-link:hover {
         color: var(--color-text);
-        min-height: 100vh;
+      }
+      
+      .disclaimer {
+        margin-bottom: var(--spacing-md);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
         flex-direction: column;
-        margin: 0;
-        padding: 0;
+        align-items: center;
       }
       
-      main {
-        flex: 1;
-        background: #000000;
-        width: 100%;
-      }
-      
-      /* Footer styles */
-      .footer {
-        background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        padding: var(--spacing-xl) 0 0 0;
-        margin-top: auto;
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .footer::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-        opacity: 0.3;
-      }
-      
-      .footer-content {
-        max-width: var(--content-width);
-        margin: 0 auto;
-        padding: 0 var(--spacing-md) var(--spacing-lg) var(--spacing-md);
-        text-align: center;
-        color: var(--color-text-light);
-        font-size: 0.9rem;
-        position: relative;
-        z-index: 1;
-      }
-      
-      .footer-nostr {
-        color: var(--color-text-light);
-        margin-bottom: var(--spacing-md);
-        font-size: 0.9rem;
-      }
-      
-      /* Disclaimer styles */
-      .disclaimer {
-        background: rgba(0, 0, 0, 0.3);
-        padding: var(--spacing-lg) 0;
-        position: relative;
-      }
-      
-      .disclaimer::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-        opacity: 0.2;
-      }
-      
-      .disclaimer-content {
-        max-width: var(--content-width);
-        margin: 0 auto;
-        padding: 0 var(--spacing-lg);
-        position: relative;
-        z-index: 1;
-      }
-      
-      .disclaimer h4 {
-        color: var(--color-primary);
-        font-size: 0.95rem;
-        margin-bottom: var(--spacing-sm);
-        text-align: center;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        opacity: 0.9;
-      }
+
       
       .disclaimer p {
+        margin: 0;
         color: var(--color-text-light);
-        font-size: 0.85rem;
-        line-height: 1.7;
-        margin: 0 auto;
-        text-align: center;
-        max-width: 800px;
-        opacity: 0.8;
-      }
-      
-      /* Accessibility focus styles */
-      :focus-visible {
-        outline: 2px solid var(--color-primary);
-        outline-offset: 2px;
-      }
-      
-      /* Print styles */
-      @media print {
-        .disclaimer,
-        .footer {
-          display: none;
-        }
+        font-size: 0.875rem;
+        line-height: 1.5;
       }
     </style>
   </head>
   <body>
     <slot />
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-nostr">nostr@9x9</div>
       <div class="disclaimer">
         <div class="disclaimer-content">
-          <h4>Disclaimer</h4>
           <p>This website is a personal project created for educational purposes only. It reflects the author's opinions and experiences with Bitcoin technology. Nothing on this site should be considered financial or investment advice.</p>
         </div>
       </div>
+      <a href="https://nostr.com/npub14tqtqmj23m4d4huy7zw9e3s3vphcqnw2mpd4c7zrcjuhlm5w2m9sgszufh" class="nostr-link">nostr@9x9</a>
     </footer>
   </body>
 </html>
