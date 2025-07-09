@@ -19,83 +19,43 @@ const {
 
 <a 
   href={href}
-  class="circle-link"
+  class="text-link"
   style={`
-    --circle-size: ${size};
-    --circle-color: ${color};
-    --text-color: ${textColor};
+    --link-color: ${color};
+    color: ${textColor};
   `}
 >
-  <span class="circle-link__text">{text}</span>
+  {text}
 </a>
 
 <style>
-  .circle-link {
-    --circle-size: 120px;
-    --circle-color: #F7931A;
-    --text-color: white;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .text-link {
+    display: block;
     width: 100%;
-    max-width: var(--circle-size);
-    aspect-ratio: 1/1;
-    background-color: var(--circle-color);
-    border-radius: 50%;
     color: var(--text-color);
     text-decoration: none;
-    text-align: center;
     font-weight: bold;
-    font-size: calc(var(--circle-size) * 0.16);
-    transition: transform 0.2s ease;
-    margin: 0 auto;
     font-family: var(--font-mono);
-    border: 2px solid rgba(120, 119, 108, 0.3);
-    box-shadow: 
-      0 4px 8px rgba(120, 119, 108, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: var(--link-color, #F7931A);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .text-link:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
   }
 
-  .circle-link:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 
-      0 6px 12px rgba(120, 119, 108, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  }
-
-  .circle-link__text {
-    padding: 0 10px;
-    word-break: break-word;
-  }
-
-  @media (max-width: 599px) {
-    .circle-link {
-      --circle-size: 100%;
-      max-width: 160px;
-      min-height: 120px;
-      font-size: 0.9rem;
-    }
-  }
-
-  @media (min-width: 600px) and (max-width: 1023px) {
-    .circle-link {
-      --circle-size: 140px;
-      font-size: 0.85rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .circle-link {
-      --circle-size: 130px;
-      font-size: 0.8rem;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .circle-link {
-      --circle-size: 156px;
-      font-size: 0.9rem;
+  @media (min-width: 768px) {
+    .text-link {
+      display: inline-block;
+      width: auto;
+      padding: 0.5rem 1.5rem;
+      margin: 0 0.5rem 1rem 0;
     }
   }
 </style>
