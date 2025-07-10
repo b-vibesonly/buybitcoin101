@@ -180,6 +180,20 @@ body {
 }
 
 /* Typography */
+strong {
+  color: inherit;
+}
+
+/* Page-specific strong tag styling */
+.page-colored-strong {
+  color: var(--page-color, var(--color-primary));
+}
+
+/* Breadcrumb link color */
+.breadcrumb-link {
+  color: var(--page-color, var(--color-primary)) !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
@@ -221,7 +235,7 @@ a:hover {
 }
 
 strong {
-  color: var(--color-primary);
+  color: var(--page-color, var(--color-primary));
   font-weight: 700;
 }
 

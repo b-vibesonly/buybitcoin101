@@ -3,9 +3,10 @@
 interface Props {
   title: string;
   description?: string;
+  pageColor?: string;
 }
 
-const { title, description = 'Learn about Bitcoin and how to get started' } = Astro.props;
+const { title, description = 'Learn about Bitcoin and how to get started', pageColor } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -72,7 +73,7 @@ const { title, description = 'Learn about Bitcoin and how to get started' } = As
       }
     </style>
   </head>
-  <body class="min-h-screen bg-black text-white flex flex-col">
+  <body class="min-h-screen bg-black text-white flex flex-col" style={pageColor ? `--page-color: ${pageColor};` : ''}>
     <main class="flex-grow">
       <div class="main-content">
         <slot />
@@ -85,7 +86,6 @@ const { title, description = 'Learn about Bitcoin and how to get started' } = As
             <p>This website is a personal project created for educational purposes only. It reflects the author's opinions and experiences with Bitcoin technology. Nothing on this site should be considered financial or investment advice.</p>
           </div>
         </div>
-        <p>&copy; {new Date().getFullYear()} Bitcoin 101. All rights reserved.</p>
         <a href="https://nostr.com/npub14tqtqmj23m4d4huy7zw9e3s3vphcqnw2mpd4c7zrcjuhlm5w2m9sgszufh" class="nostr-link">nostr@9x9</a>
       </div>
     </footer>

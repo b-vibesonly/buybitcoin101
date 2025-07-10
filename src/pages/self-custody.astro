@@ -7,7 +7,7 @@ import PageNav from '../components/PageNav.astro';
 import PageHeader from '../components/PageHeader.astro';
 ---
 
-<BaseLayout title="What is Self Custody?">
+<BaseLayout title="What is Self Custody?" pageColor="#FF2D55">
     <Header />
     
     <main class="main-content">
@@ -238,12 +238,13 @@ import PageHeader from '../components/PageHeader.astro';
       }
       
       .card-badge {
-        background: #F7931A;
+        background: var(--page-color, #FF2D55);
         color: white;
         padding: 0.25rem 0.5rem;
         border-radius: 4px;
         font-size: 0.75rem;
         font-weight: 600;
+        font-family: var(--font-mono);
       }
       
       .card-description {
@@ -267,7 +268,7 @@ import PageHeader from '../components/PageHeader.astro';
       }
       
       .card-arrow {
-        color: #F7931A;
+        color: var(--page-color, #FF2D55);
         font-size: 1.25rem;
         font-weight: bold;
       }
@@ -312,7 +313,10 @@ import PageHeader from '../components/PageHeader.astro';
         display: grid;
         gap: 1.5rem;
         margin: 2rem 0;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
       }
       
       .skill-card {

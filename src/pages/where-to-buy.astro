@@ -7,7 +7,7 @@ import PageNav from '../components/PageNav.astro';
 import PageHeader from '../components/PageHeader.astro';
 ---
 
-<BaseLayout title="Where to Buy">
+<BaseLayout title="Where to Buy" pageColor="#FF4081">
     <Header />
     
     <main class="main-content">
@@ -19,7 +19,7 @@ import PageHeader from '../components/PageHeader.astro';
       
       <div class="content-container">
         <Breadcrumbs current="Where to Buy" />
-        <p>Most Bitcoiners recommend buying bitcoin from a bitcoin only exchange. You can search for <strong>"bitcoin only exchanges"</strong> on the internet to find options in your country. Bitcoiners recommend bitcoin only exchanges because of their focus on providing a safe and secure Bitcoin experience.</p>
+        <p>Most Bitcoiners recommend buying bitcoin from a bitcoin only exchange. You can search for <strong class="page-colored-strong">"bitcoin only exchanges"</strong> on the internet to find options in your country. Bitcoiners recommend bitcoin only exchanges because of their focus on providing a safe and secure Bitcoin experience.</p>
         <p>Here are some options available in the US:</p>
         
         <div class="exchange-cards">
@@ -116,14 +116,15 @@ import PageHeader from '../components/PageHeader.astro';
       }
       
       .card-badge {
-        background: #F7931A;
-        color: #000;
+        background: var(--page-color, #FF4081);
+        color: #fff;
         padding: 0.25rem 0.5rem;
         border-radius: 4px;
         font-size: 0.75rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+        font-family: var(--font-mono);
       }
       
       .card-description {
