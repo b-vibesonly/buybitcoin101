@@ -34,6 +34,7 @@ const currentPath = Astro.url.pathname;
     padding-top: var(--spacing-lg);
     padding-bottom: var(--spacing-lg);
     padding-right: var(--spacing-lg);
+    padding-left: var(--spacing-md);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-border);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -111,6 +112,12 @@ const currentPath = Astro.url.pathname;
     
     .nav-list {
       grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .page-nav {
+      padding-left: var(--spacing-lg);
     }
   }
   
