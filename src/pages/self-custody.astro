@@ -61,19 +61,16 @@ import PageHeader from '../components/PageHeader.astro';
         
         <div class="skills-grid">
           <div class="skill-card">
-            <div class="skill-icon">🔐</div>
             <h3>Seed Phrase Security</h3>
             <p>What a seed phrase is and how to store one safely.</p>
           </div>
           
           <div class="skill-card">
-            <div class="skill-icon">💻↔️</div>
             <h3>Using a "Wallet"</h3>
             <p>Picking a software app or hardware device to load your seed phrase into, so you can approve your bitcoin payments on your phone or computer.</p>
           </div>
           
           <div class="skill-card">
-            <div class="skill-icon">⚡</div>
             <h3>Run Your Own Node</h3>
             <p>Running your own Bitcoin node to verify how much bitcoin is tied to your seed phrase, and send and receive it using your own device.</p>
           </div>
@@ -321,8 +318,8 @@ import PageHeader from '../components/PageHeader.astro';
       }
       
       .skill-card {
-        background: #111;
-        border: 1px solid #444;
+        background: #fff;
+        border: 1px solid #000;
         border-radius: 8px;
         padding: 1.5rem;
         text-align: center;
@@ -330,22 +327,16 @@ import PageHeader from '../components/PageHeader.astro';
         transition: all 0.2s ease;
       }
       
-      
-      .skill-icon {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-      
       .skill-card h3 {
         margin: 0 0 1rem 0;
-        color: #fff;
+        color: #000;
         font-size: 1.125rem;
         font-weight: 500;
       }
       
       .skill-card p {
         margin: 0;
-        color: #eee;
+        color: #000;
         line-height: 1.6;
         text-align: left;
       }
