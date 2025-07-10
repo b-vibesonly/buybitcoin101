@@ -118,13 +118,15 @@ import PageHeader from '../components/PageHeader.astro';
       .card-badge {
         background: var(--page-color, #FF4081);
         color: #fff;
-        padding: 0.25rem 0.5rem;
+        padding: 0.4rem 0.9rem;
         border-radius: 4px;
         font-size: 0.75rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         font-family: var(--font-mono);
+        margin-left: 0.75rem;
+        display: inline-block;
       }
       
       .card-description {
@@ -153,8 +155,11 @@ import PageHeader from '../components/PageHeader.astro';
       
       @media (min-width: 768px) {
         .exchange-cards {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: 1fr;
           gap: 1.5rem;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
     </style>
