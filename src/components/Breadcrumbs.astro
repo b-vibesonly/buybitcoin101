@@ -26,7 +26,7 @@ const { current } = Astro.props;
   }
   
   .breadcrumb-link {
-    color: var(--color-primary);
+    color: var(--page-color, var(--color-primary));
     text-decoration: none;
     transition: var(--transition);
     display: inline-flex;
@@ -37,13 +37,14 @@ const { current } = Astro.props;
   }
   
   .breadcrumb-link:hover {
-    color: var(--color-link-hover);
+    color: var(--page-color, var(--color-link-hover));
     background: rgba(0, 0, 0, 0.2);
     text-decoration: none;
+    opacity: 0.9;
   }
   
   .breadcrumb-link:focus-visible {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid var(--page-color, var(--color-primary));
     outline-offset: 2px;
   }
   
