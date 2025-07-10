@@ -124,13 +124,15 @@ const { showDonation = false } = Astro.props;
   
   @media (min-width: 768px) {
     .logo {
-      max-height: 140px;
+      max-height: 180px;
+      max-width: min(95%, 500px);
     }
     
     .btc-address {
       font-size: 0.9rem;
       padding: 0.5rem 1rem;
     }
+    
     .donation-address {
       padding: var(--spacing-sm) var(--spacing-lg);
     }
@@ -138,7 +140,15 @@ const { showDonation = false } = Astro.props;
   
   @media (min-width: 1024px) {
     .logo {
-      max-height: 160px;
+      max-height: 200px;
+      max-width: min(95%, 550px);
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .logo {
+      max-height: 220px;
+      max-width: min(95%, 600px);
     }
     
     .logo-container {

@@ -6,6 +6,7 @@ export interface Props {
   color?: string;
   size?: string;
   textColor?: string;
+  style?: string;
 }
 
 const { 
@@ -13,7 +14,8 @@ const {
   text, 
   color = '#F7931A',
   size = '156px',
-  textColor = 'white'
+  textColor = 'white',
+  style = ''
 } = Astro.props;
 ---
 
