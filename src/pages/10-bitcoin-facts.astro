@@ -60,7 +60,11 @@ import PageHeader from '../components/PageHeader.astro';
 
     <style>
       .main-content {
-        padding: var(--spacing-lg) 0;
+        width: 100%;
+        max-width: var(--content-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+        box-sizing: border-box;
         flex: 1;
         background: #000; /* Pure black background */
         min-height: 100%;
