@@ -279,6 +279,14 @@ import PageHeader from '../components/PageHeader.astro';
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       }
       
+      /* Remove any potential warning symbols */
+      .warning-box::before,
+      .warning-box p::before,
+      .warning-box strong::before {
+        display: none !important;
+        content: none !important;
+      }
+      
       .warning-box p {
         margin: 0;
         color: #000;
