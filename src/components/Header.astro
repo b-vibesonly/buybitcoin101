@@ -43,9 +43,9 @@ const { showDonation = false } = Astro.props;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;rem
+    align-items: center;
     min-height: var(--header-height);
-    padding: var(--spacing-md);
+    padding: 0;
     gap: var(--spacing-sm);
     max-width: var(--max-width);
     margin: 0 auto;
@@ -55,7 +55,7 @@ const { showDonation = false } = Astro.props;
     text-decoration: none;
     display: inline-block;
     transition: var(--transition);
-    padding: var(--spacing-sm);
+    padding: 0;
     border-radius: var(--border-radius);
   }
   
@@ -124,8 +124,8 @@ const { showDonation = false } = Astro.props;
   
   @media (min-width: 768px) {
     .logo {
-      max-height: 220px;
-      max-width: min(95%, 600px);
+      max-height: 300px;
+      max-width: min(95%, 800px);
     }
     
     .btc-address {
@@ -140,26 +140,27 @@ const { showDonation = false } = Astro.props;
   
   @media (min-width: 1024px) {
     .logo {
-      max-height: 280px;
-      max-width: min(95%, 750px);
+      max-height: 200px;
+      max-width: min(95%, 500px);
     }
   }
   
   @media (min-width: 1200px) {
     .logo {
-      max-height: 320px;
-      max-width: min(95%, 800px);
+      max-height: 240px;
+      max-width: min(95%, 600px);
     }
     
     .logo-container {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: var(--spacing-md) var(--spacing-lg);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
     }
     
     .donation-address {
-      margin-top: 0;
-      margin-left: var(--spacing-lg);
+      margin-top: var(--spacing-sm);
+      margin-left: 0;
     }
   }
   
