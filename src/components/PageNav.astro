@@ -97,10 +97,11 @@ const currentPath = Astro.url.pathname;
   }
 
   .nav-link.active {
-    background: white;
-    color: black;
+    background: white !important;
+    color: black !important;
     font-weight: 500;
-    border-color: var(--color-border);
+    border-color: var(--color-border) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   @media (max-width: 768px) {
@@ -117,6 +118,15 @@ const currentPath = Astro.url.pathname;
   @media (min-width: 769px) {
     .page-nav {
       padding-left: var(--spacing-lg);
+    }
+  }
+
+  /* Mobile Safari specific fix */
+  @supports (-webkit-touch-callout: none) {
+    .nav-link.active {
+      background-color: white !important;
+      color: #000 !important;
+      border: 1px solid var(--color-border) !important;
     }
   }
 
