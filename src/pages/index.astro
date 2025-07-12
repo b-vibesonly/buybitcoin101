@@ -9,8 +9,10 @@ import CircleLink from '../components/CircleLink.astro';
 
   <main class="main-content">
     <div class="container">
-      <div class="pizza">🍕</div>
-      <div class="links-grid">
+      <div class="bitcoin-explosion" id="bitcoin-explosion"></div>
+      <div class="links-grid-container">
+        <div class="pizza" id="flying-pizza">🍕</div>
+        <div class="links-grid">
         <CircleLink
           href="/what-is-money"
           text="What is money"
@@ -53,6 +55,7 @@ import CircleLink from '../components/CircleLink.astro';
           textColor="white"
           style="--i: 5"
         />
+        </div>
       </div>
     </div>
   </main>
@@ -96,51 +99,39 @@ import CircleLink from '../components/CircleLink.astro';
     }
 
     .pizza {
-      position: fixed;
+      position: absolute;
       font-size: 2rem;
       z-index: 100;
-      pointer-events: none;
+      pointer-events: auto;
+      cursor: pointer;
       user-select: none;
-      animation: hop-around 15.6s infinite linear;
+      top: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
       filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
       color: #000;
       text-shadow: none;
+      transition: transform 0.1s ease;
     }
 
-    @keyframes hop-around {
-      0% {
-        transform: translate(10vw, 20vh) scale(1) rotate(0deg);
-      }
-      12.5% {
-        transform: translate(80vw, 15vh) scale(1.2) rotate(45deg);
-      }
-      25% {
-        transform: translate(85vw, 70vh) scale(0.8) rotate(90deg);
-      }
-      37.5% {
-        transform: translate(40vw, 80vh) scale(1.1) rotate(180deg);
-      }
-      50% {
-        transform: translate(5vw, 60vh) scale(0.9) rotate(225deg);
-      }
-      62.5% {
-        transform: translate(15vw, 30vh) scale(1.3) rotate(270deg);
-      }
-      75% {
-        transform: translate(70vw, 25vh) scale(0.7) rotate(315deg);
-      }
-      87.5% {
-        transform: translate(60vw, 75vh) scale(1.1) rotate(360deg);
-      }
-      100% {
-        transform: translate(10vw, 20vh) scale(1) rotate(405deg);
-      }
+    .links-grid-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .pizza:active {
+      transform: translateX(-50%) scale(0.9);
     }
 
     @media (max-width: 768px) {
       .pizza {
         font-size: 1.5rem;
-        animation-duration: 10.4s;
+      }
+      
+      .links-grid-container {
+        max-width: 100%;
       }
     }
 
@@ -149,14 +140,140 @@ import CircleLink from '../components/CircleLink.astro';
         transition: none !important;
         animation: none !important;
       }
-      
-      .pizza {
-        animation: none;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        opacity: 0.3;
-      }
+    }
+
+    .bitcoin-explosion {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      transform-origin: center;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .pizza.exploding {
+      opacity: 0 !important;
+      transition: opacity 0.5s ease-out;
+    }
+    
+    .pizza:not(.exploding) {
+      opacity: 1;
+      transition: opacity 0.3s ease-in;
     }
   </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const pizza = document.getElementById('flying-pizza');
+      const explosionContainer = document.getElementById('bitcoin-explosion');
+      let hasExploded = false;
+
+      pizza?.addEventListener('click', function(e) {
+        if (hasExploded) return;
+        
+        hasExploded = true;
+        
+        // Get pizza's current animated position
+        const rect = pizza.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        // Store the explosion position
+        const explosionX = centerX;
+        const explosionY = centerY;
+        
+        // Add exploding class to pizza
+        pizza.classList.add('exploding');
+        
+        // Create confetti explosion
+        const confettiCount = 50; // More confetti pieces
+        const colors = ['🧡', '💰', '⭐', '🪙', '✨', '🐰'];
+        
+        for (let i = 0; i < confettiCount; i++) {
+          const confetti = document.createElement('div');
+          confetti.className = 'confetti-piece';
+          confetti.innerHTML = colors[Math.floor(Math.random() * colors.length)];
+          
+          // Random properties - bigger explosion
+          const angle = Math.random() * Math.PI * 2;
+          const velocity = Math.random() * 25 + 10; // Increased velocity
+          const gravity = 0.3; // Reduced gravity for longer flight
+          const friction = 0.985; // Less friction
+          const wobble = Math.random() * 0.1 + 0.05;
+          
+          let x = explosionX;
+          let y = explosionY;
+          let vx = Math.cos(angle) * velocity;
+          let vy = Math.sin(angle) * velocity;
+          let rotation = 0;
+          let rotationSpeed = Math.random() * 20 - 10;
+          let opacity = 1;
+          let scale = Math.random() * 0.5 + 0.5;
+          
+          confetti.style.position = 'absolute';
+          confetti.style.left = x + 'px';
+          confetti.style.top = y + 'px';
+          confetti.style.fontSize = (Math.random() * 1.5 + 1.5) + 'rem'; // Bigger confetti
+          confetti.style.pointerEvents = 'none';
+          confetti.style.zIndex = '1000';
+          
+          explosionContainer?.appendChild(confetti);
+          
+          let startTime = null;
+          
+          function animate(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+            
+            // Physics simulation
+            vy += gravity;
+            vx *= friction;
+            vy *= friction;
+            
+            x += vx;
+            y += vy;
+            
+            rotation += rotationSpeed;
+            
+            // Wobble effect
+            x += Math.sin(elapsed * wobble) * 0.5;
+            
+            // Fade out over time - longer duration
+            opacity = Math.max(0, 1 - elapsed / 4000);
+            
+            // Apply transforms
+            confetti.style.left = x + 'px';
+            confetti.style.top = y + 'px';
+            confetti.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+            confetti.style.opacity = opacity;
+            
+            // Remove when off screen or faded
+            if (opacity > 0 && y < window.innerHeight + 100) {
+              requestAnimationFrame(animate);
+            } else {
+              confetti.remove();
+            }
+          }
+          
+          requestAnimationFrame(animate);
+        }
+        
+        // Pizza vanishes permanently after explosion
+        setTimeout(() => {
+          pizza.style.display = 'none'; // Hide pizza permanently
+          // Don't reset hasExploded so pizza stays gone
+        }, 1000);
+      });
+    });
+  </script>
+
 </BaseLayout>
