@@ -23,7 +23,9 @@ const { showDonation = false } = Astro.props;
     {
       showDonation && (
         <div class="donation-address">
-          <div class="btc-address">bc1qprx3e7uschjqzr5adxx85z8um8pjlqy92gqq9l</div>
+          <div class="btc-address" id="btc-address" title="Click to copy Bitcoin address">
+            bc1qprx3e7uschjqzr5adxx85z8um8pjlqy92gqq9l
+          </div>
           <div class="nostr-address">
             <a
               href="https://nostr.com/npub1hddv0a35pj02qu9s23ylnefps0etxkszzq5222u65v0l3elcymrsgfu32z"
@@ -109,6 +111,21 @@ const { showDonation = false } = Astro.props;
     white-space: nowrap;
     display: inline-block;
     margin-bottom: 0.25rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .btc-address:hover {
+    color: #F7931A;
+    background: rgba(247, 147, 26, 0.1);
+  }
+
+  .btc-address.copied {
+    color: #00E676;
+    background: rgba(0, 230, 118, 0.1);
   }
 
   .nostr-address {
@@ -177,3 +194,48 @@ const { showDonation = false } = Astro.props;
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btcAddress = document.getElementById('btc-address');
+    
+    if (btcAddress) {
+      btcAddress.addEventListener('click', async function() {
+        const address = 'bc1qprx3e7uschjqzr5adxx85z8um8pjlqy92gqq9l';
+        
+        try {
+          // Use modern clipboard API if available
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(address);
+          } else {
+            // Fallback for older browsers
+            const textArea = document.createElement('textarea');
+            textArea.value = address;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            document.execCommand('copy');
+            textArea.remove();
+          }
+          
+          // Visual feedback
+          btcAddress.classList.add('copied');
+          btcAddress.title = 'Copied to clipboard!';
+          
+          // Reset after 2 seconds
+          setTimeout(() => {
+            btcAddress.classList.remove('copied');
+            btcAddress.title = 'Click to copy Bitcoin address';
+          }, 2000);
+          
+        } catch (error) {
+          console.error('Failed to copy address:', error);
+          btcAddress.title = 'Copy failed - please select and copy manually';
+        }
+      });
+    }
+  });
+</script>
