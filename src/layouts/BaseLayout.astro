@@ -17,13 +17,13 @@ const {
 } = Astro.props;
 
 const canonicalUrl = canonical || new URL(Astro.url.pathname, Astro.site).toString();
-const fullTitle = title === 'Home' ? 'Buy Bitcoin 101' : `${title} | Buy Bitcoin 101`;
+const fullTitle = title === 'Home' ? 'Bitcoin 101 Pizza' : `${title} | Bitcoin 101 Pizza`;
 
 // Structured data for SEO
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
-  name: 'Buy Bitcoin 101',
+  name: 'Bitcoin 101 Pizza',
   description: description,
   url: canonicalUrl,
   logo: new URL('/images/b101-trimmed.png', Astro.site),
@@ -54,7 +54,7 @@ const structuredData = {
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(ogImage, Astro.site)} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:site_name" content="Buy Bitcoin 101" />
+    <meta property="og:site_name" content="Bitcoin 101 Pizza" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -64,7 +64,7 @@ const structuredData = {
 
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Buy Bitcoin 101" />
+    <meta name="author" content="Bitcoin 101 Pizza" />
     <meta
       name="keywords"
       content="bitcoin, cryptocurrency, money, education, buy bitcoin, self custody, financial freedom"

@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://buybitcoin101.com', // Update with your actual domain
+  site: 'https://bitcoin101.pizza', // Update with your actual domain
   output: 'static',
 
   build: {
