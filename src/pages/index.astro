@@ -5,107 +5,100 @@ import CircleLink from '../components/CircleLink.astro';
 ---
 
 <BaseLayout title="Home">
-    <Header showDonation={true} />
-    
-    <main class="main-content">
-      <div class="container">
+  <Header showDonation={true} />
 
-        <div class="links-grid">
-          <CircleLink 
-            href="/what-is-money" 
-            text="What is money" 
-            color="#00E5FF" 
-            textColor="#111"
-            style="--i: 0"
-          />
-          <CircleLink 
-            href="/why-am-i-broke" 
-            text="Why am I broke" 
-            color="#7C4DFF" 
-            textColor="white"
-            style="--i: 1"
-          />
-          <CircleLink 
-            href="/10-bitcoin-facts" 
-            text="10 Bitcoin facts" 
-            color="#FFEA00" 
-            textColor="#111"
-            style="--i: 2"
-          />
-          <CircleLink 
-            href="/am-i-too-late" 
-            text="Am I too late" 
-            color="#00E676" 
-            textColor="#111"
-            style="--i: 3"
-          />
-          <CircleLink 
-            href="/where-to-buy" 
-            text="Where to buy" 
-            color="#FF4081" 
-            textColor="white"
-            style="--i: 4"
-          />
-          <CircleLink 
-            href="/self-custody" 
-            text="What is self custody" 
-            color="#FF2D55" 
-            textColor="white"
-            style="--i: 5"
-          />
-        </div>
-        
-
+  <main class="main-content">
+    <div class="container">
+      <div class="links-grid">
+        <CircleLink
+          href="/what-is-money"
+          text="What is money"
+          color="#00E5FF"
+          textColor="#111"
+          style="--i: 0"
+        />
+        <CircleLink
+          href="/why-am-i-broke"
+          text="Why am I broke"
+          color="#7C4DFF"
+          textColor="white"
+          style="--i: 1"
+        />
+        <CircleLink
+          href="/10-bitcoin-facts"
+          text="10 Bitcoin facts"
+          color="#FFEA00"
+          textColor="#111"
+          style="--i: 2"
+        />
+        <CircleLink
+          href="/am-i-too-late"
+          text="Am I too late"
+          color="#00E676"
+          textColor="#111"
+          style="--i: 3"
+        />
+        <CircleLink
+          href="/where-to-buy"
+          text="Where to buy"
+          color="#FF4081"
+          textColor="white"
+          style="--i: 4"
+        />
+        <CircleLink
+          href="/self-custody"
+          text="What is self custody"
+          color="#FF2D55"
+          textColor="white"
+          style="--i: 5"
+        />
       </div>
-    </main>
+    </div>
+  </main>
 
-    <style>
-      .main-content {
-        padding: var(--spacing-lg) 0;
-        flex: 1;
-      }
-      
-      
+  <style>
+    .main-content {
+      padding: var(--spacing-lg) 0;
+      flex: 1;
+    }
+
+    .links-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      width: 100%;
+      padding: var(--spacing-md) 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 600px) {
       .links-grid {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-sm);
-        width: 100%;
-        padding: var(--spacing-md) 0;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      
-
-      @media (min-width: 600px) {
-        .links-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          max-width: 800px;
-          gap: var(--spacing-md);
-        }
-        
-        .links-grid a {
-          height: 100%;
-        }
-        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+        gap: var(--spacing-md);
       }
 
-      @media (min-width: 1024px) {
-        .links-grid {
-          grid-template-columns: repeat(3, 1fr);
-          max-width: 1000px;
-          gap: var(--spacing-lg);
-          padding: var(--spacing-xl) 0;
-        }
-        
+      .links-grid a {
+        height: 100%;
       }
-      
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          transition: none !important;
-          animation: none !important;
-        }
+    }
+
+    @media (min-width: 1024px) {
+      .links-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-xl) 0;
       }
-    </style>
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
 </BaseLayout>

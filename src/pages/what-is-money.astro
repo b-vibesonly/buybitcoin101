@@ -8,48 +8,47 @@ import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="What is Money?" pageColor="#00E5FF">
-    <Header />
-    
-    <main class="main-content">
-      <PageHeader 
-        title="What is Money?" 
-        color="#00E5FF" 
-        textColor="#111"
-      />
-      
-      <div class="content-container">
-        <Breadcrumbs current="What is Money" />
-        <p>For something to be money it needs to be good at certain things.</p>
-        <p>It should be:</p>
-        <ul>
-          <li>Tough and not easily destroyed.</li>
-          <li>Be able to be divided into smaller units so you can buy cheap things easily.</li>
-          <li>Easy to carry around.</li>
-          <li>Scarce so it holds it's value and buys the same amount of things years later.</li>
-          <li>Hard to fake, so you don't have to worry about counterfeits.</li> 
-        </ul>
-        <br />
-        <p>If something can do all of the above maybe it can be used as money.</p>
-        <p>Bitcoin is so good at the above that some people call it <strong class="page-colored-strong">perfect money.</strong></p>
-        <BackToHome />
-      </div>
-      <PageNav />
-    </main>
+  <Header />
 
-    <style>
-      /* Content styles */
-      p {
-        margin-bottom: var(--spacing-md);
-        line-height: 1.6;
-      }
-      
-      ul {
-        margin-left: var(--spacing-md);
-        margin-bottom: var(--spacing-md);
-      }
-      
-      li {
-        margin-bottom: var(--spacing-xs);
-      }
-    </style>
+  <main class="main-content">
+    <PageHeader title="What is Money?" color="#00E5FF" textColor="#111" />
+
+    <div class="content-container">
+      <Breadcrumbs current="What is Money" />
+      <p>For something to be money it needs to be good at certain things.</p>
+      <p>It should be:</p>
+      <ul>
+        <li>Tough and not easily destroyed.</li>
+        <li>Be able to be divided into smaller units so you can buy cheap things easily.</li>
+        <li>Easy to carry around.</li>
+        <li>Scarce so it holds it's value and buys the same amount of things years later.</li>
+        <li>Hard to fake, so you don't have to worry about counterfeits.</li>
+      </ul>
+      <br />
+      <p>If something can do all of the above maybe it can be used as money.</p>
+      <p>
+        Bitcoin is so good at the above that some people call it <strong class="page-colored-strong"
+          >perfect money.</strong>
+      </p>
+      <BackToHome />
+    </div>
+    <PageNav />
+  </main>
+
+  <style>
+    /* Content styles */
+    p {
+      margin-bottom: var(--spacing-md);
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+    }
+
+    li {
+      margin-bottom: var(--spacing-xs);
+    }
+  </style>
 </BaseLayout>

@@ -8,69 +8,63 @@ import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="Am I Too Late to Buy Bitcoin?" pageColor="#00E676">
-    <Header />
-    
-    <main class="main-content">
-      <PageHeader 
-        title="Am I Too Late to Buy Bitcoin?" 
-        color="#00E676" 
-        textColor="#111"
-      />
-      
-      <div class="content-container">
-        <Breadcrumbs current="Am I Too Late?" />
-        <ul>
-          <li>How many people do you know that own bitcoin?</li>
-          <li>How many people do you know that understand bitcoin?</li>
-          <li>Bitcoiners believe that bitcoin is undervalued, misunderstood, and underappreciated.</li>
-        </ul>
-        <br />
-        <p>Anyone buying bitcoin today is still early.</p>
-        <div class="header-image">
-          <img 
-            src="/images/toolate.png" 
-            alt="No, you are not too late"
-            class="too-late-image"
-          />
-        </div>
-        <BackToHome />
-      </div>
-      <PageNav />
-    </main>
+  <Header />
 
-    <style>
-      .content-container {
-        background: #111;
-        border: 1px solid #444;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        color: #e0e0e0;
-      }
-      
-      .header-image {
-        text-align: center;
-        margin-top: var(--spacing-lg);
-        margin-bottom: var(--spacing-lg);
-      }
-      
-      .too-late-image {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        border: 2px solid var(--color-border);
-      }
-      
-      p {
-        margin-bottom: var(--spacing-md);
-        line-height: 1.6;
-      }
-      
-      ul {
-        margin-left: var(--spacing-md);
-        margin-bottom: var(--spacing-md);
-      }
-      
-      li {
-        margin-bottom: var(--spacing-xs);
-      }
-    </style>
+  <main class="main-content">
+    <PageHeader title="Am I Too Late to Buy Bitcoin?" color="#00E676" textColor="#111" />
+
+    <div class="content-container">
+      <Breadcrumbs current="Am I Too Late?" />
+      <ul>
+        <li>How many people do you know that own bitcoin?</li>
+        <li>How many people do you know that understand bitcoin?</li>
+        <li>
+          Bitcoiners believe that bitcoin is undervalued, misunderstood, and underappreciated.
+        </li>
+      </ul>
+      <br />
+      <p>Anyone buying bitcoin today is still early.</p>
+      <div class="header-image">
+        <img src="/images/toolate.png" alt="No, you are not too late" class="too-late-image" />
+      </div>
+      <BackToHome />
+    </div>
+    <PageNav />
+  </main>
+
+  <style>
+    .content-container {
+      background: #111;
+      border: 1px solid #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      color: #e0e0e0;
+    }
+
+    .header-image {
+      text-align: center;
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .too-late-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid var(--color-border);
+    }
+
+    p {
+      margin-bottom: var(--spacing-md);
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+    }
+
+    li {
+      margin-bottom: var(--spacing-xs);
+    }
+  </style>
 </BaseLayout>

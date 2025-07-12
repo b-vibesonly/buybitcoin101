@@ -7,282 +7,348 @@ import PageNav from '../components/PageNav.astro';
 ---
 
 <BaseLayout title="Fact Check - Why Am I Broke?">
-    <Header />
-    
-    <main class="main-content">
-      <div class="content-container">
-        <Breadcrumbs current="Fact Check" />
-        <h1>Fact Check - Why Am I Broke?</h1>
-        
-        <div class="attribution-notice">
-          <p><em>This fact-check document was produced by ChatGPT for verification purposes.</em></p>
-        </div>
-        
-        <p class="intro-text">This document provides a fact-checked breakdown of a simplified educational explanation of inflation and Bitcoin. Each claim has been evaluated for accuracy with references provided.</p>
-        
-        <section>
-          <h2>Inflation and Fiat Currency</h2>
-          
-          <div class="fact-check-item">
-            <h3>✅ Claim: Inflation makes your money worth less.</h3>
-            <p><strong>True.</strong><br>
-            Inflation is defined as the general increase in prices over time, which reduces the purchasing power of money.<br>
-            <strong>Source:</strong> <a href="https://www.stlouisfed.org/in-plain-english/inflation" target="_blank">stlouisfed.org</a></p>
-          </div>
+  <Header />
 
-          <div class="fact-check-item">
-            <h3>✅ Claim: The money we use is designed to lose value over time — this is called inflation.</h3>
-            <p><strong>Mostly True.</strong><br>
-            Modern fiat systems target positive inflation (e.g., 2% annually in the U.S.) as part of central bank policy.<br>
-            <strong>Source:</strong> <a href="https://www.federalreserve.gov/faqs/economy_14400.htm" target="_blank">federalreserve.gov</a></p>
-          </div>
+  <main class="main-content">
+    <div class="content-container">
+      <Breadcrumbs current="Fact Check" />
+      <h1>Fact Check - Why Am I Broke?</h1>
 
-          <div class="fact-check-item">
-            <h3>✅ Claim: When governments inflate money, there's more of it in the world.</h3>
-            <p><strong>True (in monetary terms).</strong><br>
-            Inflation often results from expanding the money supply without matching production.<br>
-            <strong>Source:</strong> <a href="https://www.investopedia.com/terms/q/quantitytheoryofmoney.asp" target="_blank">investopedia.com</a></p>
-          </div>
-
-          <div class="fact-check-item">
-            <h3>✅ Claim: When something becomes less rare, it becomes less valuable.</h3>
-            <p><strong>True (economic principle).</strong><br>
-            This follows the law of supply and demand.</p>
-          </div>
-
-          <div class="fact-check-item">
-            <h3>✅ Claim: As more money is created, the money you have buys less.</h3>
-            <p><strong>True.</strong><br>
-            Increased money supply without economic growth reduces currency value.<br>
-            <strong>Source:</strong> <a href="https://www.imf.org/en/Blogs/Articles/2018/11/15/what-is-money" target="_blank">imf.org</a></p>
-          </div>
-
-          <div class="fact-check-item">
-            <h3>✅ Claim: Central banks create inflation on purpose to encourage spending.</h3>
-            <p><strong>True.</strong><br>
-            Positive inflation reduces the incentive to hoard money, supporting consumption and jobs.<br>
-            <strong>Source:</strong> <a href="https://www.federalreserve.gov/faqs/economy_14400.htm" target="_blank">federalreserve.gov</a></p>
-          </div>
-
-          <div class="fact-check-item">
-            <h3>✅ Claim: Most people don't realize this.</h3>
-            <p><strong>Subjective, but reasonable.</strong><br>
-            Surveys suggest limited public understanding of inflation and monetary policy.<br>
-            <strong>Source:</strong> <a href="https://www.forbes.com/sites/jeanbaptiste/?sh=13a84ab7132a" target="_blank">forbes.com</a></p>
-          </div>
-
-          <div class="fact-check-item">
-            <h3>✅ Claim: Bread has gotten cheaper to produce, but prices have still gone up.</h3>
-            <p><strong>Generally true.</strong><br>
-            Better machines and productivity lower cost, but inflation and input costs raise prices.<br>
-            <strong>Source:</strong> <a href="https://www.ers.usda.gov/data-products/food-price-outlook/" target="_blank">ers.usda.gov</a></p>
-          </div>
-
-          <div class="fact-check-item">
-            <h3>✅ Claim: Prices rise not because bread changed, but because money did.</h3>
-            <p><strong>Mostly true.</strong><br>
-            While some input costs fluctuate, long-term inflation is driven more by monetary value erosion than by bread production cost increases.<br>
-            <strong>Source:</strong> Bureau of Labor Statistics CPI data</p>
-          </div>
-        </section>
-
-        <section>
-          <h2>Bitcoin</h2>
-          
-          <div class="fact-check-item">
-            <h3>✅ Claim: Bitcoin is different. Bitcoin inflates less and less over time.</h3>
-            <p><strong>True.</strong><br>
-            Bitcoin has a fixed maximum supply (21 million), and the issuance rate halves roughly every 4 years — a deflationary design.<br>
-            <strong>Source:</strong> <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">bitcoin.org</a></p>
-          </div>
-
-          <div class="fact-check-item">
-            <h3>✅ Claim: Over the last years, house prices in BTC terms have declined significantly.</h3>
-            <p><strong>True.</strong></p>
-            <table class="btc-price-table">
-              <thead>
-                <tr>
-                  <th>Year</th>
-                  <th>Average Home Price in bitcoin</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>2016</td>
-                  <td>~664 BTC</td>
-                </tr>
-                <tr>
-                  <td>2020</td>
-                  <td>~31.6 BTC</td>
-                </tr>
-                <tr>
-                  <td>2024</td>
-                  <td>~4.8 BTC</td>
-                </tr>
-              </tbody>
-            </table>
-            <p><strong>Sources:</strong><br>
-            <a href="https://www.benzinga.com/25/04/44806549/itd-have-required-around-31-bitcoin-to-buy-a-home-in-us-five-years-agoheres-how-many-a-person-needs-to-buy-one-in-2025" target="_blank">benzinga.com</a><br>
-            <a href="https://www.nasdaq.com/articles/bitcoin-key-unlocking-dream-homeownership-generation-priced-out" target="_blank">nasdaq.com</a></p>
-          </div>
-
-          <div class="fact-check-item">
-            <h3>✅ Claim: One dollar buys much less.</h3>
-            <p><strong>True.</strong><br>
-            The U.S. dollar has lost over 90% of its purchasing power since 1913.<br>
-            <strong>Source:</strong> <a href="https://www.usinflationcalculator.com/" target="_blank">usinflationcalculator.com</a></p>
-          </div>
-
-          <div class="fact-check-item">
-            <h3>✅ Claim: Bitcoin is scarce, so it holds value better and may even gain over time.</h3>
-            <p><strong>Generally true.</strong><br>
-            Bitcoin's scarcity (fixed cap and predictable issuance) contributes to its store-of-value narrative. Still, its value is market-driven and volatile.<br>
-            <strong>Sources:</strong> CoinMetrics, Glassnode</p>
-          </div>
-        </section>
-
-        <BackToHome />
+      <div class="attribution-notice">
+        <p><em>This fact-check document was produced by ChatGPT for verification purposes.</em></p>
       </div>
-      <PageNav />
-    </main>
 
-    <style>
-      .content-container {
-        padding: var(--spacing-lg);
-        background: var(--color-bg-alt);
-        border-radius: 8px;
-        border: 1px solid var(--color-border);
-        box-shadow: 0 2px 4px rgba(120, 119, 108, 0.1);
-        max-width: 800px;
-        margin: 0 auto var(--spacing-lg) auto;
-      }
-      
-      .attribution-notice {
-        background: rgba(74, 144, 226, 0.1);
-        border: 1px solid #d4af37;
-        border-radius: 4px;
-        padding: var(--spacing-md);
-        margin-bottom: var(--spacing-lg);
-        text-align: center;
-      }
-      
-      .attribution-notice em {
-        color: #8b7355;
-        font-weight: 500;
-      }
-      
-      h1 {
-        color: var(--color-text);
-        margin-bottom: var(--spacing-lg);
-        padding-bottom: var(--spacing-sm);
-        border-bottom: 2px solid var(--color-border);
-      }
-      
-      h2 {
-        color: var(--color-text);
-        margin-top: var(--spacing-xl);
-        margin-bottom: var(--spacing-md);
-        font-size: 1.5rem;
-        border-bottom: 1px solid var(--color-border);
-        padding-bottom: var(--spacing-xs);
-      }
-      
-      h3 {
-        color: var(--color-text);
-        margin-bottom: var(--spacing-sm);
-        font-size: 1.1rem;
-      }
-      
-      p {
-        margin-bottom: var(--spacing-md);
-        line-height: 1.6;
-      }
-      
-      .intro-text {
-        font-size: 1.1rem;
-        margin-bottom: var(--spacing-lg);
-        padding: var(--spacing-md);
-        background: rgba(0, 0, 0, 0.3);
-        border-left: 4px solid var(--color-border);
-        border-radius: 4px;
-      }
-      
-      .fact-check-item {
-        background: rgba(0, 0, 0, 0.2);
-        border: 1px solid var(--color-border);
-        border-radius: 6px;
-        padding: var(--spacing-md);
-        margin-bottom: var(--spacing-md);
-      }
-      
-      .fact-check-item h3 {
-        margin-top: 0;
-        color: var(--color-text);
-      }
-      
-      .summary {
-        background: rgba(10, 10, 10, 0.8);
-        border: 2px solid #4a90e2;
-        border-radius: 8px;
-        padding: var(--spacing-lg);
-        margin-top: var(--spacing-xl);
-      }
-      
-      .summary h2 {
-        margin-top: 0;
-        color: #2c5aa0;
-        border-bottom: none;
-      }
-      
-      a {
-        color: #0066cc;
-        text-decoration: none;
-      }
-      
-      a:hover {
-        text-decoration: underline;
-      }
-      
-      strong {
-        color: var(--color-text);
-        font-weight: bold;
-      }
-      
-      em {
-        font-style: italic;
-        color: var(--color-text-light);
-      }
+      <p class="intro-text">
+        This document provides a fact-checked breakdown of a simplified educational explanation of
+        inflation and Bitcoin. Each claim has been evaluated for accuracy with references provided.
+      </p>
 
-      section {
-        margin-bottom: var(--spacing-xl);
-      }
-      
-      .btc-price-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: var(--spacing-md) 0;
-        font-size: 0.9rem;
-      }
-      
-      .btc-price-table th,
-      .btc-price-table td {
-        border: 1px solid var(--color-border);
-        padding: var(--spacing-sm);
-        text-align: left;
-      }
-      
-      .btc-price-table th {
-        background: var(--color-bg-alt);
-        font-weight: bold;
-        color: var(--color-text);
-      }
-      
-      .btc-price-table td {
-        background: rgba(0, 0, 0, 0.1);
-      }
-      
-      .btc-price-table tr:nth-child(even) td {
-        background: rgba(0, 0, 0, 0.15);
-      }
-    </style>
+      <section>
+        <h2>Inflation and Fiat Currency</h2>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: Inflation makes your money worth less.</h3>
+          <p>
+            <strong>True.</strong><br />
+            Inflation is defined as the general increase in prices over time, which reduces the purchasing
+            power of money.<br />
+            <strong>Source:</strong>
+            <a href="https://www.stlouisfed.org/in-plain-english/inflation" target="_blank"
+              >stlouisfed.org</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>
+            ✅ Claim: The money we use is designed to lose value over time — this is called
+            inflation.
+          </h3>
+          <p>
+            <strong>Mostly True.</strong><br />
+            Modern fiat systems target positive inflation (e.g., 2% annually in the U.S.) as part of
+            central bank policy.<br />
+            <strong>Source:</strong>
+            <a href="https://www.federalreserve.gov/faqs/economy_14400.htm" target="_blank"
+              >federalreserve.gov</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: When governments inflate money, there's more of it in the world.</h3>
+          <p>
+            <strong>True (in monetary terms).</strong><br />
+            Inflation often results from expanding the money supply without matching production.<br
+            />
+            <strong>Source:</strong>
+            <a href="https://www.investopedia.com/terms/q/quantitytheoryofmoney.asp" target="_blank"
+              >investopedia.com</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: When something becomes less rare, it becomes less valuable.</h3>
+          <p>
+            <strong>True (economic principle).</strong><br />
+            This follows the law of supply and demand.
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: As more money is created, the money you have buys less.</h3>
+          <p>
+            <strong>True.</strong><br />
+            Increased money supply without economic growth reduces currency value.<br />
+            <strong>Source:</strong>
+            <a href="https://www.imf.org/en/Blogs/Articles/2018/11/15/what-is-money" target="_blank"
+              >imf.org</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: Central banks create inflation on purpose to encourage spending.</h3>
+          <p>
+            <strong>True.</strong><br />
+            Positive inflation reduces the incentive to hoard money, supporting consumption and jobs.<br
+            />
+            <strong>Source:</strong>
+            <a href="https://www.federalreserve.gov/faqs/economy_14400.htm" target="_blank"
+              >federalreserve.gov</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: Most people don't realize this.</h3>
+          <p>
+            <strong>Subjective, but reasonable.</strong><br />
+            Surveys suggest limited public understanding of inflation and monetary policy.<br />
+            <strong>Source:</strong>
+            <a href="https://www.forbes.com/sites/jeanbaptiste/?sh=13a84ab7132a" target="_blank"
+              >forbes.com</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: Bread has gotten cheaper to produce, but prices have still gone up.</h3>
+          <p>
+            <strong>Generally true.</strong><br />
+            Better machines and productivity lower cost, but inflation and input costs raise prices.<br
+            />
+            <strong>Source:</strong>
+            <a href="https://www.ers.usda.gov/data-products/food-price-outlook/" target="_blank"
+              >ers.usda.gov</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: Prices rise not because bread changed, but because money did.</h3>
+          <p>
+            <strong>Mostly true.</strong><br />
+            While some input costs fluctuate, long-term inflation is driven more by monetary value erosion
+            than by bread production cost increases.<br />
+            <strong>Source:</strong> Bureau of Labor Statistics CPI data
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Bitcoin</h2>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: Bitcoin is different. Bitcoin inflates less and less over time.</h3>
+          <p>
+            <strong>True.</strong><br />
+            Bitcoin has a fixed maximum supply (21 million), and the issuance rate halves roughly every
+            4 years — a deflationary design.<br />
+            <strong>Source:</strong>
+            <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">bitcoin.org</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>
+            ✅ Claim: Over the last years, house prices in BTC terms have declined significantly.
+          </h3>
+          <p><strong>True.</strong></p>
+          <table class="btc-price-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Average Home Price in bitcoin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2016</td>
+                <td>~664 BTC</td>
+              </tr>
+              <tr>
+                <td>2020</td>
+                <td>~31.6 BTC</td>
+              </tr>
+              <tr>
+                <td>2024</td>
+                <td>~4.8 BTC</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <strong>Sources:</strong><br />
+            <a
+              href="https://www.benzinga.com/25/04/44806549/itd-have-required-around-31-bitcoin-to-buy-a-home-in-us-five-years-agoheres-how-many-a-person-needs-to-buy-one-in-2025"
+              target="_blank">benzinga.com</a
+            ><br />
+            <a
+              href="https://www.nasdaq.com/articles/bitcoin-key-unlocking-dream-homeownership-generation-priced-out"
+              target="_blank">nasdaq.com</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>✅ Claim: One dollar buys much less.</h3>
+          <p>
+            <strong>True.</strong><br />
+            The U.S. dollar has lost over 90% of its purchasing power since 1913.<br />
+            <strong>Source:</strong>
+            <a href="https://www.usinflationcalculator.com/" target="_blank"
+              >usinflationcalculator.com</a>
+          </p>
+        </div>
+
+        <div class="fact-check-item">
+          <h3>
+            ✅ Claim: Bitcoin is scarce, so it holds value better and may even gain over time.
+          </h3>
+          <p>
+            <strong>Generally true.</strong><br />
+            Bitcoin's scarcity (fixed cap and predictable issuance) contributes to its store-of-value
+            narrative. Still, its value is market-driven and volatile.<br />
+            <strong>Sources:</strong> CoinMetrics, Glassnode
+          </p>
+        </div>
+      </section>
+
+      <BackToHome />
+    </div>
+    <PageNav />
+  </main>
+
+  <style>
+    .content-container {
+      padding: var(--spacing-lg);
+      background: var(--color-bg-alt);
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 2px 4px rgba(120, 119, 108, 0.1);
+      max-width: 800px;
+      margin: 0 auto var(--spacing-lg) auto;
+    }
+
+    .attribution-notice {
+      background: rgba(74, 144, 226, 0.1);
+      border: 1px solid #d4af37;
+      border-radius: 4px;
+      padding: var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+    }
+
+    .attribution-notice em {
+      color: #8b7355;
+      font-weight: 500;
+    }
+
+    h1 {
+      color: var(--color-text);
+      margin-bottom: var(--spacing-lg);
+      padding-bottom: var(--spacing-sm);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    h2 {
+      color: var(--color-text);
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: var(--spacing-xs);
+    }
+
+    h3 {
+      color: var(--color-text);
+      margin-bottom: var(--spacing-sm);
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin-bottom: var(--spacing-md);
+      line-height: 1.6;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-lg);
+      padding: var(--spacing-md);
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 4px solid var(--color-border);
+      border-radius: 4px;
+    }
+
+    .fact-check-item {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .fact-check-item h3 {
+      margin-top: 0;
+      color: var(--color-text);
+    }
+
+    .summary {
+      background: rgba(10, 10, 10, 0.8);
+      border: 2px solid #4a90e2;
+      border-radius: 8px;
+      padding: var(--spacing-lg);
+      margin-top: var(--spacing-xl);
+    }
+
+    .summary h2 {
+      margin-top: 0;
+      color: #2c5aa0;
+      border-bottom: none;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    strong {
+      color: var(--color-text);
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+      color: var(--color-text-light);
+    }
+
+    section {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .btc-price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--spacing-md) 0;
+      font-size: 0.9rem;
+    }
+
+    .btc-price-table th,
+    .btc-price-table td {
+      border: 1px solid var(--color-border);
+      padding: var(--spacing-sm);
+      text-align: left;
+    }
+
+    .btc-price-table th {
+      background: var(--color-bg-alt);
+      font-weight: bold;
+      color: var(--color-text);
+    }
+
+    .btc-price-table td {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .btc-price-table tr:nth-child(even) td {
+      background: rgba(0, 0, 0, 0.15);
+    }
+  </style>
 </BaseLayout>

@@ -8,16 +8,10 @@ export interface Props {
   style?: string;
 }
 
-const { 
-  href, 
-  text, 
-  color = '#F7931A',
-  textColor = 'white',
-  style = ''
-} = Astro.props;
+const { href, text, color = '#F7931A', textColor = 'white', style = '' } = Astro.props;
 ---
 
-<a 
+<a
   href={href}
   class="text-link"
   style={`
@@ -37,13 +31,15 @@ const {
     font-family: var(--font-mono);
     padding: 1rem;
     border-radius: 4px;
-    background-color: var(--link-color, #F7931A);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    background-color: var(--link-color, #f7931a);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
     text-align: center;
     margin-bottom: 0.5rem;
     box-sizing: border-box;
   }
-  
+
   .text-link:hover {
     opacity: 0.9;
     transform: translateY(-1px);

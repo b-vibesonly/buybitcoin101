@@ -8,150 +8,163 @@ import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="Why Am I Broke?" pageColor="#7C4DFF">
-    <Header />
-    
-    <main class="main-content">
-      <section class="page-header-section">
-        <div class="page-header-container">
-          <PageHeader 
-            title="Why Am I Broke?" 
-            color="#7C4DFF" 
-            textColor="white"
-          />
-        </div>
-      </section>
-      
-      <div class="content-container">
-        <Breadcrumbs current="Why Am I Broke?" />
-        
-        <p class="intro-text"><strong>Inflation makes your money worth less.</strong></p>
-        
-        <p>The money we use is designed to lose value over time — this is called inflation.</p>
-        
-        <p>Think of it like a balloon: when you inflate it, it gets bigger. When governments inflate money, there's more of it in the world.</p>
-        
-        <p>But when something becomes less rare, it also becomes less valuable.</p>
-        
-        <p><strong>So, as more money is created, the money you have buys less.</strong></p>
-        
-        <p>Central banks create more money on purpose, they create inflation on purpose. They hope this makes people spend more because saving money designed to inflate doesn't make sense. The theory is that more spending (instead of saving) helps businesses and creates jobs.</p>
-        
-        <p><em>Most people don't realize this.</em></p>
-        
-        <h2>Why does the price of bread increase?</h2>
-        
-        <p>Making bread has actually gotten easier and cheaper with better machines.</p>
-        
-        <p>So why does the price of bread go up?</p>
-        
-        <p><strong>Because the money itself is worth less.</strong></p>
-        
-        <p>It takes more dollars to buy the same loaf — not because bread changed, but because your money did.</p>
-        
-        <p><em>This is why life feels more expensive: your dollars are losing value.</em></p>
-        
-        <h2>What can you do?</h2>
-        
-        <p>Bitcoin is different. Bitcoin inflates less and less over time.</p>
-        
-        <p><strong>Over the last 15 years, prices in Bitcoin have gone down. One Bitcoin buys much more now.</strong></p>
-        
-        <p><strong>But one dollar buys much less.</strong></p>
-        
-        <p><em>Bitcoin is scarce, so it holds its value and buys the same amount of things years later — or even more.</em></p>
-        
-        <div class="fact-check-button">
-          <a href="/fact-check" class="btn-fact-check">View Fact Check</a>
-        </div>
-        
-        <BackToHome />
-      </div>
-      <PageNav />
-    </main>
+  <Header />
 
-    <style>
-      .page-header-section {
-        max-width: 800px;
-        margin: 0 auto var(--spacing-xs) auto;
-      }
-      
-      .page-header-container {
-        width: 100%;
-      }
-      
-      .content-container {
-        padding: var(--spacing-lg);
-        background: var(--color-bg-alt);
-        border-radius: 8px;
-        border: 1px solid var(--color-border);
-        box-shadow: 0 2px 4px rgba(120, 119, 108, 0.1);
-        max-width: 800px;
-        margin: 0 auto var(--spacing-lg) auto;
-      }
-      
-      h1 {
-        color: var(--color-text);
-        margin-bottom: var(--spacing-lg);
-        padding-bottom: var(--spacing-sm);
-        border-bottom: 2px solid var(--color-border);
-      }
-      
-      h2 {
-        color: var(--color-text);
-        margin-top: var(--spacing-xl);
-        margin-bottom: var(--spacing-md);
-        font-size: 1.5rem;
-        border-bottom: 1px solid var(--color-border);
-        padding-bottom: var(--spacing-xs);
-      }
-      
-      p {
-        margin-bottom: var(--spacing-md);
-        line-height: 1.6;
-      }
-      
-      .intro-text {
-        font-size: 1.2rem;
-        margin-bottom: var(--spacing-lg);
-        padding: var(--spacing-md);
-        background: rgba(0, 0, 0, 0.3);
-        border-left: 4px solid var(--color-border);
-        border-radius: 4px;
-      }
-      
-      strong {
-        color: var(--color-text);
-        font-weight: bold;
-      }
-      
-      em {
-        font-style: italic;
-        color: var(--color-text-light);
-      }
-      
-      .fact-check-button {
-        text-align: center;
-        margin: var(--spacing-lg) 0;
-      }
-      
-      .btn-fact-check {
-        display: inline-block;
-        background: #007bff;
-        color: white;
-        padding: var(--spacing-sm) var(--spacing-md);
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: bold;
-        font-size: 0.9rem;
-        font-family: 'Courier New', monospace;
-        transition: all 0.3s ease;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-      }
-      
-      .btn-fact-check:hover {
-        background: #0056b3;
-        transform: translateY(-1px);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      }
-    </style>
+  <main class="main-content">
+    <section class="page-header-section">
+      <div class="page-header-container">
+        <PageHeader title="Why Am I Broke?" color="#7C4DFF" textColor="white" />
+      </div>
+    </section>
+
+    <div class="content-container">
+      <Breadcrumbs current="Why Am I Broke?" />
+
+      <p class="intro-text"><strong>Inflation makes your money worth less.</strong></p>
+
+      <p>The money we use is designed to lose value over time — this is called inflation.</p>
+
+      <p>
+        Think of it like a balloon: when you inflate it, it gets bigger. When governments inflate
+        money, there's more of it in the world.
+      </p>
+
+      <p>But when something becomes less rare, it also becomes less valuable.</p>
+
+      <p><strong>So, as more money is created, the money you have buys less.</strong></p>
+
+      <p>
+        Central banks create more money on purpose, they create inflation on purpose. They hope this
+        makes people spend more because saving money designed to inflate doesn't make sense. The
+        theory is that more spending (instead of saving) helps businesses and creates jobs.
+      </p>
+
+      <p><em>Most people don't realize this.</em></p>
+
+      <h2>Why does the price of bread increase?</h2>
+
+      <p>Making bread has actually gotten easier and cheaper with better machines.</p>
+
+      <p>So why does the price of bread go up?</p>
+
+      <p><strong>Because the money itself is worth less.</strong></p>
+
+      <p>
+        It takes more dollars to buy the same loaf — not because bread changed, but because your
+        money did.
+      </p>
+
+      <p><em>This is why life feels more expensive: your dollars are losing value.</em></p>
+
+      <h2>What can you do?</h2>
+
+      <p>Bitcoin is different. Bitcoin inflates less and less over time.</p>
+
+      <p>
+        <strong
+          >Over the last 15 years, prices in Bitcoin have gone down. One Bitcoin buys much more now.</strong>
+      </p>
+
+      <p><strong>But one dollar buys much less.</strong></p>
+
+      <p>
+        <em
+          >Bitcoin is scarce, so it holds its value and buys the same amount of things years later —
+          or even more.</em>
+      </p>
+
+      <div class="fact-check-button">
+        <a href="/fact-check" class="btn-fact-check">View Fact Check</a>
+      </div>
+
+      <BackToHome />
+    </div>
+    <PageNav />
+  </main>
+
+  <style>
+    .page-header-section {
+      max-width: 800px;
+      margin: 0 auto var(--spacing-xs) auto;
+    }
+
+    .page-header-container {
+      width: 100%;
+    }
+
+    .content-container {
+      padding: var(--spacing-lg);
+      background: var(--color-bg-alt);
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 2px 4px rgba(120, 119, 108, 0.1);
+      max-width: 800px;
+      margin: 0 auto var(--spacing-lg) auto;
+    }
+
+    h1 {
+      color: var(--color-text);
+      margin-bottom: var(--spacing-lg);
+      padding-bottom: var(--spacing-sm);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    h2 {
+      color: var(--color-text);
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: var(--spacing-xs);
+    }
+
+    p {
+      margin-bottom: var(--spacing-md);
+      line-height: 1.6;
+    }
+
+    .intro-text {
+      font-size: 1.2rem;
+      margin-bottom: var(--spacing-lg);
+      padding: var(--spacing-md);
+      background: rgba(0, 0, 0, 0.3);
+      border-left: 4px solid var(--color-border);
+      border-radius: 4px;
+    }
+
+    strong {
+      color: var(--color-text);
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+      color: var(--color-text-light);
+    }
+
+    .fact-check-button {
+      text-align: center;
+      margin: var(--spacing-lg) 0;
+    }
+
+    .btn-fact-check {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      font-family: 'Courier New', monospace;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-fact-check:hover {
+      background: #0056b3;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </BaseLayout>

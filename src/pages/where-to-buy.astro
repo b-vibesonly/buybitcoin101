@@ -8,159 +8,181 @@ import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="Where to Buy" pageColor="#FF4081">
-    <Header />
-    
-    <main class="main-content">
-      <PageHeader 
-        title="Where to Buy" 
-        color="#FF4081" 
-        textColor="white"
-      />
-      
-      <div class="content-container">
-        <Breadcrumbs current="Where to Buy" />
-        <p>Most Bitcoiners recommend buying bitcoin from a bitcoin only exchange. You can search for <strong class="page-colored-strong">"bitcoin only exchanges"</strong> on the internet to find options in your country. Bitcoiners recommend bitcoin only exchanges because of their focus on providing a safe and secure Bitcoin experience.</p>
-        <p>Here are some options available in the US:</p>
-        
-        <div class="exchange-cards">
-          <a href="https://strike.me/" class="exchange-card" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">
-              <h3>Strike</h3>
-              <span class="card-badge">Bitcoin Only</span>
-            </div>
-            <p class="card-description">Lightning-fast Bitcoin purchases with no fees. Built for Bitcoin payments and savings.</p>
-            <div class="card-footer">
-              <span class="card-url">strike.me</span>
-              <span class="card-arrow">→</span>
-            </div>
-          </a>
-          
-          <a href="https://river.com/" class="exchange-card" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">
-              <h3>River Financial</h3>
-              <span class="card-badge">Bitcoin Only</span>
-            </div>
-            <p class="card-description">Bitcoin-only financial services with institutional-grade security and custody.</p>
-            <div class="card-footer">
-              <span class="card-url">river.com</span>
-              <span class="card-arrow">→</span>
-            </div>
-          </a>
-          
-          <a href="https://www.swanbitcoin.com/" class="exchange-card" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">
-              <h3>Swan Bitcoin</h3>
-              <span class="card-badge">Bitcoin Only</span>
-            </div>
-            <p class="card-description">Dollar-cost averaging made simple. Automated Bitcoin purchases with low fees.</p>
-            <div class="card-footer">
-              <span class="card-url">www.swanbitcoin.com</span>
-              <span class="card-arrow">→</span>
-            </div>
-          </a>
-        </div>
-        <BackToHome />
-      </div>
-      <PageNav />
-    </main>
+  <Header />
 
-    <style>
-      .content-container {
-        background: #111;
-        border: 1px solid #444;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        color: #e0e0e0;
-      }
-      
-      p {
-        margin-bottom: var(--spacing-md);
-        line-height: 1.6;
-      }
-      
+  <main class="main-content">
+    <PageHeader title="Where to Buy" color="#FF4081" textColor="white" />
+
+    <div class="content-container">
+      <Breadcrumbs current="Where to Buy" />
+      <p>
+        Most Bitcoiners recommend buying bitcoin from a bitcoin only exchange. You can search for <strong
+          class="page-colored-strong">"bitcoin only exchanges"</strong
+        > on the internet to find options in your country. Bitcoiners recommend bitcoin only exchanges
+        because of their focus on providing a safe and secure Bitcoin experience.
+      </p>
+      <p>Here are some options available in the US:</p>
+
+      <div class="exchange-cards">
+        <a
+          href="https://strike.me/"
+          class="exchange-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="card-header">
+            <h3>Strike</h3>
+            <span class="card-badge">Bitcoin Only</span>
+          </div>
+          <p class="card-description">
+            Lightning-fast Bitcoin purchases with no fees. Built for Bitcoin payments and savings.
+          </p>
+          <div class="card-footer">
+            <span class="card-url">strike.me</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </a>
+
+        <a
+          href="https://river.com/"
+          class="exchange-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="card-header">
+            <h3>River Financial</h3>
+            <span class="card-badge">Bitcoin Only</span>
+          </div>
+          <p class="card-description">
+            Bitcoin-only financial services with institutional-grade security and custody.
+          </p>
+          <div class="card-footer">
+            <span class="card-url">river.com</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </a>
+
+        <a
+          href="https://www.swanbitcoin.com/"
+          class="exchange-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="card-header">
+            <h3>Swan Bitcoin</h3>
+            <span class="card-badge">Bitcoin Only</span>
+          </div>
+          <p class="card-description">
+            Dollar-cost averaging made simple. Automated Bitcoin purchases with low fees.
+          </p>
+          <div class="card-footer">
+            <span class="card-url">www.swanbitcoin.com</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </a>
+      </div>
+      <BackToHome />
+    </div>
+    <PageNav />
+  </main>
+
+  <style>
+    .content-container {
+      background: #111;
+      border: 1px solid #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      color: #e0e0e0;
+    }
+
+    p {
+      margin-bottom: var(--spacing-md);
+      line-height: 1.6;
+    }
+
+    .exchange-cards {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .exchange-card {
+      background: #111;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.2s ease;
+      display: block;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .exchange-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      border-color: #f7931a;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .card-badge {
+      background: var(--page-color, #ff4081);
+      color: #fff;
+      padding: 0.4rem 0.9rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-family: var(--font-mono);
+      margin-left: 0.75rem;
+      display: inline-block;
+    }
+
+    .card-description {
+      color: #e0e0e0;
+      margin: 0 0 1rem 0;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-url {
+      color: #aaa;
+      font-size: 0.875rem;
+    }
+
+    .card-arrow {
+      color: #ff4081;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
       .exchange-cards {
-        display: grid;
-        gap: 1rem;
-        margin-top: 2rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
       }
-      
-      .exchange-card {
-        background: #111;
-        border: 1px solid #444;
-        border-radius: 8px;
-        padding: 1.5rem;
-        text-decoration: none;
-        color: #fff;
-        transition: all 0.2s ease;
-        display: block;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      }
-      
-      .exchange-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-        border-color: #F7931A;
-      }
-      
-      .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 0.75rem;
-      }
-      
-      .card-header h3 {
-        margin: 0;
-        font-size: 1.25rem;
-        color: #fff;
-        font-weight: 600;
-      }
-      
-      .card-badge {
-        background: var(--page-color, #FF4081);
-        color: #fff;
-        padding: 0.4rem 0.9rem;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-family: var(--font-mono);
-        margin-left: 0.75rem;
-        display: inline-block;
-      }
-      
-      .card-description {
-        color: #e0e0e0;
-        margin: 0 0 1rem 0;
-        line-height: 1.7;
-        font-size: 1rem;
-      }
-      
-      .card-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-      .card-url {
-        color: #aaa;
-        font-size: 0.875rem;
-      }
-      
-      .card-arrow {
-        color: #FF4081;
-        font-size: 1.25rem;
-        font-weight: bold;
-      }
-      
-      @media (min-width: 768px) {
-        .exchange-cards {
-          grid-template-columns: 1fr;
-          gap: 1.5rem;
-          max-width: 600px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-      }
-    </style>
+    }
+  </style>
 </BaseLayout>

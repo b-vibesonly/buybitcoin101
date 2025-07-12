@@ -4,33 +4,33 @@
   --content-width: 800px;
   --content-padding: 1.5rem;
   --content-margin: 1rem auto 2rem auto;
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  
+
   /* Pure dark theme colors */
-  --color-bg: #000000;        /* Pure black */
-  --color-bg-alt: #0a0a0a;    /* Slightly lighter black for contrast */
-  --color-text: #ffffff;      /* Pure white for text */
+  --color-bg: #000000; /* Pure black */
+  --color-bg-alt: #0a0a0a; /* Slightly lighter black for contrast */
+  --color-text: #ffffff; /* Pure white for text */
   --color-text-light: #888888; /* Darker gray for secondary text */
-  --color-border: #1a1a1a;    /* Very dark gray for borders */
-  --color-primary: #4a90e2;   /* Blue for primary actions */
+  --color-border: #1a1a1a; /* Very dark gray for borders */
+  --color-primary: #4a90e2; /* Blue for primary actions */
   --color-primary-hover: #63a0e8; /* Lighter blue for hover states */
-  --color-link: #4a90e2;      /* Same as primary for consistency */
+  --color-link: #4a90e2; /* Same as primary for consistency */
   --color-link-hover: #63a0e8; /* Lighter blue for link hover */
-  
+
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
-  
+
   --max-width: 1200px;
   --header-height: 180px;
-  
+
   --border-radius: 6px;
   --transition: all 0.2s ease-in-out;
 }
-
 
 /* Content Container */
 .content-container {
@@ -72,7 +72,7 @@
   .page-header {
     padding: 1.5rem 2rem;
   }
-  
+
   .page-title {
     font-size: 1.5rem;
   }
@@ -98,12 +98,11 @@ main {
   .main-content {
     padding: 0 2rem;
   }
-  
+
   .page-header {
     padding: 1.5rem 2rem;
   }
 }
-
 
 .page-title {
   display: block;
@@ -173,7 +172,12 @@ strong {
   color: var(--page-color, var(--color-primary)) !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--spacing-md);
@@ -265,7 +269,6 @@ select:focus {
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 }
 
-
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -292,7 +295,7 @@ select:focus {
   .container {
     padding: 0 var(--spacing-sm);
   }
-  
+
   .main-content {
     padding: var(--spacing-md) var(--spacing-sm);
   }
@@ -328,15 +331,15 @@ select:focus {
   :root {
     --header-height: 140px;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.75rem;
   }
-  
+
   h3 {
     font-size: 1.25rem;
   }

@@ -11,7 +11,7 @@
     margin: var(--spacing-xl) 0 var(--spacing-lg) 0;
     text-align: center;
   }
-  
+
   .back-button {
     display: inline-flex;
     align-items: center;
@@ -31,7 +31,7 @@
     position: relative;
     overflow: hidden;
   }
-  
+
   .back-button::before {
     content: '←';
     margin-right: 0.5rem;
@@ -39,7 +39,7 @@
     position: relative;
     left: 0;
   }
-  
+
   .back-button:hover {
     background: var(--color-primary);
     border-color: var(--color-primary);
@@ -47,29 +47,29 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
-  
+
   .back-button:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
   }
-  
+
   @media (max-width: 768px) {
     .back-to-home {
       margin: var(--spacing-lg) 0 var(--spacing-md) 0;
     }
-    
+
     .back-button {
       padding: 0.5rem 1rem;
       font-size: 0.9rem;
       min-width: 140px;
     }
   }
-  
+
   @media (prefers-reduced-motion: reduce) {
     .back-button {
       transition: none;
     }
-    
+
     .back-button:hover {
       transform: none;
     }

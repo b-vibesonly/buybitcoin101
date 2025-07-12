@@ -8,19 +8,15 @@ import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout title="10 Bitcoin Facts" pageColor="#FFEA00">
-    <Header />
-    
-    <main class="main-content">
-      <PageHeader 
-        title="10 Bitcoin Facts" 
-        color="#FFEA00" 
-        textColor="#111"
-      />
-      
-      <div class="content-container">
-        <Breadcrumbs current="10 Bitcoin Facts" />
-        <p><strong class="page-colored-strong">Bitcoin and Crypto are different things.</strong> </p>
-        <p>When people learn the difference they understand why Bitcoin is so special.</p>
+  <Header />
+
+  <main class="main-content">
+    <PageHeader title="10 Bitcoin Facts" color="#FFEA00" textColor="#111" />
+
+    <div class="content-container">
+      <Breadcrumbs current="10 Bitcoin Facts" />
+      <p><strong class="page-colored-strong">Bitcoin and Crypto are different things.</strong></p>
+      <p>When people learn the difference they understand why Bitcoin is so special.</p>
       <div class="facts-container">
         <div class="fact">
           <div class="fact-content">There will only ever be 21 million bitcoin.</div>
@@ -29,173 +25,197 @@ import PageHeader from '../components/PageHeader.astro';
           <div class="fact-content">No one knows who invented Bitcoin.</div>
         </div>
         <div class="fact">
-          <div class="fact-content">Bitcoin is not a company, it doesn't have a CEO or leader, and can't go bankrupt. Bitcoin has nothing to do with the NASDAQ, or any political party, or a specific country.</div>
+          <div class="fact-content">
+            Bitcoin is not a company, it doesn't have a CEO or leader, and can't go bankrupt.
+            Bitcoin has nothing to do with the NASDAQ, or any political party, or a specific
+            country.
+          </div>
         </div>
         <div class="fact">
-          <div class="fact-content">Bitcoin was inspired by decades of research into money and cryptography.</div>
+          <div class="fact-content">
+            Bitcoin was inspired by decades of research into money and cryptography.
+          </div>
         </div>
         <div class="fact">
-          <div class="fact-content">Bitcoin was designed to help everyday people by preserving their wealth and making their payments impossible to block.</div>
+          <div class="fact-content">
+            Bitcoin was designed to help everyday people by preserving their wealth and making their
+            payments impossible to block.
+          </div>
         </div>
         <div class="fact">
-          <div class="fact-content">It's incredibly difficult to take or steal someone's bitcoin when they understand how it works.</div>
+          <div class="fact-content">
+            It's incredibly difficult to take or steal someone's bitcoin when they understand how it
+            works.
+          </div>
         </div>
         <div class="fact">
-          <div class="fact-content">Bitcoin mining creates new bitcoin. It's not solving complex math problems. It's more like a lottery that requires electricity to play, this makes bitcoin hard to produce, or fake, and keeps it scarce. <strong class="page-colored-strong">Bitcoin is backed by energy.</strong></div>
+          <div class="fact-content">
+            Bitcoin mining creates new bitcoin. It's not solving complex math problems. It's more
+            like a lottery that requires electricity to play, this makes bitcoin hard to produce, or
+            fake, and keeps it scarce. <strong class="page-colored-strong"
+              >Bitcoin is backed by energy.</strong>
+          </div>
         </div>
         <div class="fact">
-          <div class="fact-content">Every four years the amount of new bitcoin that can be created is halved. Most of it already exists.</div>
+          <div class="fact-content">
+            Every four years the amount of new bitcoin that can be created is halved. Most of it
+            already exists.
+          </div>
         </div>
         <div class="fact">
-          <div class="fact-content">Bitcoin (with big B) refers to the entire Bitcoin payments system (the protocol), while bitcoin (with small b) refers to the currency/money that you can buy, use and sell.</div>
+          <div class="fact-content">
+            Bitcoin (with big B) refers to the entire Bitcoin payments system (the protocol), while
+            bitcoin (with small b) refers to the currency/money that you can buy, use and sell.
+          </div>
         </div>
         <div class="fact">
-          <div class="fact-content">bitcoin is a really bad money for criminals or money launderers to use. It can easily be tracked.</div>
+          <div class="fact-content">
+            bitcoin is a really bad money for criminals or money launderers to use. It can easily be
+            tracked.
+          </div>
         </div>
       </div>
-        <BackToHome />
-      </div>
-      <PageNav />
-    </main>
+      <BackToHome />
+    </div>
+    <PageNav />
+  </main>
 
-    <style>
-      .main-content {
-        width: 100%;
-        max-width: var(--content-width);
-        margin: 0 auto;
-        padding: 0 var(--spacing-md);
-        box-sizing: border-box;
-        flex: 1;
-        background: #000; /* Pure black background */
-        min-height: 100%;
+  <style>
+    .main-content {
+      width: 100%;
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+      box-sizing: border-box;
+      flex: 1;
+      background: #000; /* Pure black background */
+      min-height: 100%;
+    }
+
+    .content-container {
+      background: #111;
+      border: 1px solid #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      color: #e0e0e0;
+      padding: var(--spacing-lg);
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: var(--spacing-lg);
+      padding-bottom: var(--spacing-sm);
+      border-bottom: 2px solid #444;
+      font-size: 2rem;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .facts-container {
+      width: 100%;
+      margin: var(--spacing-md) 0 var(--spacing-xl) 0;
+      padding: 0;
+    }
+
+    .fact {
+      background: #000;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 0.75rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .fact:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      border-color: #f7931a;
+    }
+
+    .fact-content {
+      color: #e0e0e0;
+      line-height: 1.7;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .fact-content strong {
+      color: var(--page-color, #ffea00);
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    .warning-box {
+      background: #fff !important;
+      border: 2px solid #ff4444 !important;
+      position: relative;
+      margin: 2rem 0;
+    }
+
+    .warning-box .fact-content {
+      color: #000 !important;
+      font-weight: 700;
+      text-align: center;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .warning-box .fact-number {
+      background: #ff4444 !important;
+      color: #fff !important;
+      font-weight: 800;
+    }
+
+    .warning-box::before {
+      content: '⚠️';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .fact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 var(--spacing-md) var(--spacing-lg) var(--spacing-md);
+        border-radius: 8px;
+      }
+
+      .content-container::before {
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      ol {
+        padding-left: var(--spacing-md);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
       }
 
       .content-container {
-        background: #111;
-        border: 1px solid #444;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        color: #e0e0e0;
-        padding: var(--spacing-lg);
-      }
-      
-      h1 {
-        color: #fff;
-        margin-bottom: var(--spacing-lg);
-        padding-bottom: var(--spacing-sm);
-        border-bottom: 2px solid #444;
-        font-size: 2rem;
-        line-height: 1.3;
-        font-weight: 700;
-      }
-      
-      .facts-container {
-        width: 100%;
-        margin: var(--spacing-md) 0 var(--spacing-xl) 0;
-        padding: 0;
-      }
-      
-      .fact {
-        background: #000;
-        border: 1px solid #444;
-        border-radius: 8px;
-        padding: 1rem 1.5rem;
-        margin-bottom: 0.75rem;
-        transition: all 0.2s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-      
-      .fact:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-        border-color: #F7931A;
-      }
-      
-
-      
-      .fact-content {
-        color: #e0e0e0;
-        line-height: 1.7;
-        margin: 0;
-        font-size: 1rem;
-        font-weight: 400;
-      }
-      
-      .fact-content strong {
-        color: var(--page-color, #FFEA00);
-        font-weight: 600;
-        margin-right: 0.5rem;
-      }
-      
-      .warning-box {
-        background: #fff !important;
-        border: 2px solid #ff4444 !important;
-        position: relative;
-        margin: 2rem 0;
-      }
-      
-      .warning-box .fact-content {
-        color: #000 !important;
-        font-weight: 700;
-        text-align: center;
-        font-size: 1.1rem;
-        letter-spacing: 0.5px;
-      }
-      
-      .warning-box .fact-number {
-        background: #ff4444 !important;
-        color: #fff !important;
-        font-weight: 800;
-      }
-      
-      .warning-box::before {
-        content: '⚠️';
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.5rem;
-      }
-      
-      @media (min-width: 768px) {
-        .fact-grid {
-          grid-template-columns: repeat(2, 1fr);
-          margin: 0 var(--spacing-md) var(--spacing-lg) var(--spacing-md);
-          border-radius: 8px;
-        }
-        
-        .content-container::before {
-          left: var(--spacing-md);
-          right: var(--spacing-md);
-        }
-        
-        h1 {
-          font-size: 1.75rem;
-        }
-        
-        ol {
-          padding-left: var(--spacing-md);
-        }
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
       }
 
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          transition: none !important;
-          animation: none !important;
-        }
-        
-        .content-container {
-          backdrop-filter: none;
-          -webkit-backdrop-filter: none;
-        }
-        
-        li:hover {
-          transform: none !important;
-        }
-        
-        li:hover::before {
-          transform: translateY(-50%) !important;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
-        }
+      li:hover {
+        transform: none !important;
       }
-    </style>
+
+      li:hover::before {
+        transform: translateY(-50%) !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+      }
+    }
+  </style>
 </BaseLayout>

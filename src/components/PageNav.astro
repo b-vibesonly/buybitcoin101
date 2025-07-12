@@ -1,12 +1,12 @@
 ---
 // PageNav.astro
 const pages = [
-  { href: "/what-is-money", title: "What is money" },
-  { href: "/why-am-i-broke", title: "Why am I broke" },
-  { href: "/10-bitcoin-facts", title: "10 Bitcoin facts" },
-  { href: "/am-i-too-late", title: "Am I too late" },
-  { href: "/where-to-buy", title: "Where to buy" },
-  { href: "/self-custody", title: "What is self custody" }
+  { href: '/what-is-money', title: 'What is money' },
+  { href: '/why-am-i-broke', title: 'Why am I broke' },
+  { href: '/10-bitcoin-facts', title: '10 Bitcoin facts' },
+  { href: '/am-i-too-late', title: 'Am I too late' },
+  { href: '/where-to-buy', title: 'Where to buy' },
+  { href: '/self-custody', title: 'What is self custody' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -14,16 +14,15 @@ const currentPath = Astro.url.pathname;
 
 <aside class="page-nav">
   <ul class="nav-list">
-    {pages.map(page => (
-      <li class="nav-item">
-        <a 
-          href={page.href} 
-          class={`nav-link ${currentPath === page.href ? 'active' : ''}`}
-        >
-          {page.title}
-        </a>
-      </li>
-    ))}
+    {
+      pages.map(page => (
+        <li class="nav-item">
+          <a href={page.href} class={`nav-link ${currentPath === page.href ? 'active' : ''}`}>
+            {page.title}
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </aside>
 
@@ -43,7 +42,7 @@ const currentPath = Astro.url.pathname;
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .page-nav h3 {
     font-family: var(--font-sans);
     font-size: 1.25rem;
@@ -54,7 +53,7 @@ const currentPath = Astro.url.pathname;
     font-weight: 600;
     letter-spacing: 0.5px;
   }
-  
+
   .nav-list {
     list-style: none;
     padding: 0;
@@ -63,11 +62,11 @@ const currentPath = Astro.url.pathname;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: var(--spacing-sm);
   }
-  
+
   .nav-item {
     margin: 0;
   }
-  
+
   .nav-link {
     display: flex;
     align-items: center;
@@ -84,48 +83,48 @@ const currentPath = Astro.url.pathname;
     border: 1px solid var(--color-border);
     min-height: 44px;
   }
-  
+
   .nav-link:hover {
     background: rgba(0, 0, 0, 0.3);
     color: var(--color-text);
     border-color: white;
     transform: translateY(-1px);
   }
-  
+
   .nav-link:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
   }
-  
+
   .nav-link.active {
     background: white;
     color: black;
     font-weight: 500;
     border-color: var(--color-border);
   }
-  
+
   @media (max-width: 768px) {
     .page-nav {
       margin: 0;
       padding: var(--spacing-md);
     }
-    
+
     .nav-list {
       grid-template-columns: 1fr;
     }
   }
-  
+
   @media (min-width: 769px) {
     .page-nav {
       padding-left: var(--spacing-lg);
     }
   }
-  
+
   @media (prefers-reduced-motion: reduce) {
     .nav-link {
       transition: none;
     }
-    
+
     .nav-link:hover {
       transform: none;
     }
