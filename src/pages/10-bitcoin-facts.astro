@@ -17,62 +17,62 @@ import PageHeader from '../components/PageHeader.astro';
       <Breadcrumbs current="10 Bitcoin Facts" />
       <p><strong class="page-colored-strong">Bitcoin and Crypto are different things.</strong></p>
       <p>When people learn the difference they understand why Bitcoin is so special.</p>
-      <div class="facts-container">
-        <div class="fact">
-          <div class="fact-content">There will only ever be 21 million bitcoin.</div>
+      <div class="facts-list">
+        <div class="fact-item">
+          <p>There will only ever be 21 million bitcoin.</p>
         </div>
-        <div class="fact">
-          <div class="fact-content">No one knows who invented Bitcoin.</div>
+        <div class="fact-item">
+          <p>No one knows who invented Bitcoin.</p>
         </div>
-        <div class="fact">
-          <div class="fact-content">
+        <div class="fact-item">
+          <p>
             Bitcoin is not a company, it doesn't have a CEO or leader, and can't go bankrupt.
             Bitcoin has nothing to do with the NASDAQ, or any political party, or a specific
             country.
-          </div>
+          </p>
         </div>
-        <div class="fact">
-          <div class="fact-content">
+        <div class="fact-item">
+          <p>
             Bitcoin was inspired by decades of research into money and cryptography.
-          </div>
+          </p>
         </div>
-        <div class="fact">
-          <div class="fact-content">
+        <div class="fact-item">
+          <p>
             Bitcoin was designed to help everyday people by preserving their wealth and making their
             payments impossible to block.
-          </div>
+          </p>
         </div>
-        <div class="fact">
-          <div class="fact-content">
+        <div class="fact-item">
+          <p>
             It's incredibly difficult to take or steal someone's bitcoin when they understand how it
             works.
-          </div>
+          </p>
         </div>
-        <div class="fact">
-          <div class="fact-content">
+        <div class="fact-item">
+          <p>
             Bitcoin mining creates new bitcoin. It's not solving complex math problems. It's more
             like a lottery that requires electricity to play, this makes bitcoin hard to produce, or
             fake, and keeps it scarce. <strong class="page-colored-strong"
               >Bitcoin is backed by energy.</strong>
-          </div>
+          </p>
         </div>
-        <div class="fact">
-          <div class="fact-content">
+        <div class="fact-item">
+          <p>
             Every four years the amount of new bitcoin that can be created is halved. Most of it
             already exists.
-          </div>
+          </p>
         </div>
-        <div class="fact">
-          <div class="fact-content">
+        <div class="fact-item">
+          <p>
             Bitcoin (with big B) refers to the entire Bitcoin payments system (the protocol), while
             bitcoin (with small b) refers to the currency/money that you can buy, use and sell.
-          </div>
+          </p>
         </div>
-        <div class="fact">
-          <div class="fact-content">
+        <div class="fact-item">
+          <p>
             bitcoin is a really bad money for criminals or money launderers to use. It can easily be
             tracked.
-          </div>
+          </p>
         </div>
       </div>
       <BackToHome />
@@ -110,40 +110,41 @@ import PageHeader from '../components/PageHeader.astro';
       font-weight: 700;
     }
 
-    .facts-container {
+    .facts-list {
       width: 100%;
       margin: var(--spacing-md) 0 var(--spacing-xl) 0;
       padding: 0;
     }
 
-    .fact {
-      background: #000;
-      border: 1px solid #444;
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      margin-bottom: 0.75rem;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    .fact-item {
+      padding: var(--spacing-lg) 0;
+      border-bottom: 1px solid #444;
+      transition: border-color 0.2s ease;
     }
 
-    .fact:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-      border-color: #f7931a;
+    .fact-item:first-child {
+      border-top: 1px solid #444;
     }
 
-    .fact-content {
+    .fact-item:last-child {
+      border-bottom: none;
+    }
+
+    .fact-item:hover {
+      border-bottom-color: var(--page-color, #ffea00);
+    }
+
+    .fact-item p {
       color: #e0e0e0;
       line-height: 1.7;
       margin: 0;
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 400;
     }
 
-    .fact-content strong {
+    .fact-item strong {
       color: var(--page-color, #ffea00);
       font-weight: 600;
-      margin-right: 0.5rem;
     }
 
     .warning-box {
@@ -203,18 +204,8 @@ import PageHeader from '../components/PageHeader.astro';
         animation: none !important;
       }
 
-      .content-container {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-      }
-
-      li:hover {
-        transform: none !important;
-      }
-
-      li:hover::before {
-        transform: translateY(-50%) !important;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+      .fact-item:hover {
+        border-bottom-color: #444 !important;
       }
     }
   </style>
