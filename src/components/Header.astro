@@ -27,12 +27,9 @@ const { showDonation = false } = Astro.props;
             bc1qprx3e7uschjqzr5adxx85z8um8pjlqy92gqq9l
           </div>
           <div class="nostr-address">
-            <a
-              href="https://nostr.com/npub1hddv0a35pj02qu9s23ylnefps0etxkszzq5222u65v0l3elcymrsgfu32z"
-              class="nostr-link"
-            >
+            <div class="nostr-text">
               npub1hddv0a35pj02qu9s23ylnefps0etxkszzq5222u65v0l3elcymrsgfu32z
-            </a>
+            </div>
           </div>
         </div>
       )
@@ -133,16 +130,11 @@ const { showDonation = false } = Astro.props;
     margin-top: 0.25rem;
   }
 
-  .nostr-link {
+  .nostr-text {
     font-family: var(--font-mono);
     color: #aaa; /* Light gray color */
     font-size: 0.5rem;
-    text-decoration: none;
     display: inline-block;
-  }
-
-  .nostr-link:hover {
-    color: var(--color-primary);
   }
 
   @media (min-width: 768px) {
