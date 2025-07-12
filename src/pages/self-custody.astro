@@ -407,31 +407,37 @@ import PageHeader from '../components/PageHeader.astro';
     }
 
     .skill-card {
-      background: #fff;
-      border: 1px solid #000;
+      background: var(--page-color, #FF2D55);
+      color: white;
+      border: none;
       border-radius: 8px;
       padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      min-height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
       transition: all 0.2s ease;
     }
 
     .skill-card h3 {
       margin: 0 0 1rem 0;
-      color: #000;
+      color: white;
       font-size: 1.125rem;
-      font-weight: 500;
+      font-weight: bold;
       font-family: var(--font-mono);
-      text-transform: uppercase;
+      text-align: left;
+      line-height: 1.2;
     }
 
     .skill-card p {
       margin: 0;
-      color: #000;
-      line-height: 1.6;
+      color: white;
+      line-height: 1.5;
       text-align: left;
-      font-family: var(--font-mono);
-      text-transform: uppercase;
+      font-family: var(--font-sans);
+      opacity: 0.9;
+      font-size: 1rem;
     }
   </style>
 </BaseLayout>
