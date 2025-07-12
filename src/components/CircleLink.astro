@@ -4,7 +4,6 @@ export interface Props {
   href: string;
   text: string;
   color?: string;
-  size?: string;
   textColor?: string;
   style?: string;
 }
@@ -13,7 +12,6 @@ const {
   href, 
   text, 
   color = '#F7931A',
-  size = '156px',
   textColor = 'white',
   style = ''
 } = Astro.props;
@@ -34,7 +32,6 @@ const {
   .text-link {
     display: block;
     width: 100%;
-    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
     font-family: var(--font-mono);
