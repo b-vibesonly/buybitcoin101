@@ -21,20 +21,13 @@ const { showDonation = false } = Astro.props;
       />
     </a>
     <div class="tagline">Bitcoin in 5 minutes</div>
-    {
-      showDonation && (
-        <div class="donation-address">
-          <div class="btc-address" id="btc-address" title="Click to copy Bitcoin address">
-            bc1qprx3e7uschjqzr5adxx85z8um8pjlqy92gqq9l
-          </div>
-          <div class="nostr-address">
-            <div class="nostr-text">
-              npub1hddv0a35pj02qu9s23ylnefps0etxkszzq5222u65v0l3elcymrsgfu32z
-            </div>
-          </div>
+    <div class="donation-address">
+      <div class="nostr-address">
+        <div class="nostr-text">
+          npub1hddv0a35pj02qu9s23ylnefps0etxkszzq5222u65v0l3elcymrsgfu32z
         </div>
-      )
-    }
+      </div>
+    </div>
   </div>
 </header>
 
@@ -202,7 +195,7 @@ const { showDonation = false } = Astro.props;
     
     if (btcAddress) {
       btcAddress.addEventListener('click', async function() {
-        const address = 'bc1qprx3e7uschjqzr5adxx85z8um8pjlqy92gqq9l';
+        const address = '';
         
         try {
           // Use modern clipboard API if available
